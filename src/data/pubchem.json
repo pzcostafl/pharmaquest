@@ -1,0 +1,1376 @@
+{
+  "acetaminophen": {
+    "nome": "acetaminophen",
+    "cid": 1983,
+    "formula": "C8H9NO2",
+    "peso": "151.16",
+    "iupac": "N-(4-hydroxyphenyl)acetamide",
+    "imagem": "moleculas/1983.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "acyclovir": {
+    "nome": "acyclovir",
+    "cid": 135398513,
+    "formula": "C8H11N5O3",
+    "peso": "225.20",
+    "iupac": "2-amino-9-(2-hydroxyethoxymethyl)-1H-purin-6-one",
+    "imagem": "moleculas/135398513.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "albuterol": {
+    "nome": "albuterol",
+    "cid": 2083,
+    "formula": "C13H21NO3",
+    "peso": "239.31",
+    "iupac": "4-[2-(tert-butylamino)-1-hydroxyethyl]-2-(hydroxymethyl)phenol",
+    "imagem": "moleculas/2083.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "alprazolam": {
+    "nome": "alprazolam",
+    "cid": 2118,
+    "formula": "C17H13ClN4",
+    "peso": "308.8",
+    "iupac": "8-chloro-1-methyl-6-phenyl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepine",
+    "imagem": "moleculas/2118.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "aluminum hydroxide": {
+    "nome": "aluminum hydroxide",
+    "cid": 10176082,
+    "formula": "AlH3O3",
+    "peso": "78.004",
+    "iupac": "aluminum trihydroxide",
+    "imagem": "moleculas/10176082.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "amitriptyline": {
+    "nome": "amitriptyline",
+    "cid": 2160,
+    "formula": "C20H23N",
+    "peso": "277.4",
+    "iupac": "N,N-dimethyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,11,13-hexaenylidene)propan-1-amine",
+    "imagem": "moleculas/2160.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "amlodipine": {
+    "nome": "amlodipine",
+    "cid": 2162,
+    "formula": "C20H25ClN2O5",
+    "peso": "408.9",
+    "iupac": "3-O-ethyl 5-O-methyl 2-(2-aminoethoxymethyl)-4-(2-chlorophenyl)-6-methyl-1,4-dihydropyridine-3,5-dicarboxylate",
+    "imagem": "moleculas/2162.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "amoxicillin": {
+    "nome": "amoxicillin",
+    "cid": 33613,
+    "formula": "C16H19N3O5S",
+    "peso": "365.4",
+    "iupac": "(2S,5R,6R)-6-[[(2R)-2-amino-2-(4-hydroxyphenyl)acetyl]amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+    "imagem": "moleculas/33613.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "amphotericin b": {
+    "nome": "amphotericin b",
+    "cid": 5280965,
+    "formula": "C47H73NO17",
+    "peso": "924.1",
+    "iupac": "(1R,3S,5R,6R,9R,11R,15S,16R,17R,18S,19E,21E,23E,25E,27E,29E,31E,33R,35S,36R,37S)-33-[(2R,3S,4S,5S,6R)-4-amino-3,5-dihydroxy-6-methyloxan-2-yl]oxy-1,3,5,6,9,11,17,37-octahydroxy-15,16,18-trimethyl-13-oxo-14,39-dioxabicyclo[33.3.1]nonatriaconta-19,21,23,25,27,29,31-heptaene-36-carboxylic acid",
+    "imagem": "moleculas/5280965.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ampicillin": {
+    "nome": "ampicillin",
+    "cid": 6249,
+    "formula": "C16H19N3O4S",
+    "peso": "349.4",
+    "iupac": "(2S,5R,6R)-6-[[(2R)-2-amino-2-phenylacetyl]amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+    "imagem": "moleculas/6249.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "anastrozole": {
+    "nome": "anastrozole",
+    "cid": 2187,
+    "formula": "C17H19N5",
+    "peso": "293.4",
+    "iupac": "2-[3-(2-cyanopropan-2-yl)-5-(1,2,4-triazol-1-ylmethyl)phenyl]-2-methylpropanenitrile",
+    "imagem": "moleculas/2187.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "aspirin": {
+    "nome": "aspirin",
+    "cid": 2244,
+    "formula": "C9H8O4",
+    "peso": "180.16",
+    "iupac": "2-acetyloxybenzoic acid",
+    "imagem": "moleculas/2244.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "atenolol": {
+    "nome": "atenolol",
+    "cid": 2249,
+    "formula": "C14H22N2O3",
+    "peso": "266.34",
+    "iupac": "2-[4-[2-hydroxy-3-(propan-2-ylamino)propoxy]phenyl]acetamide",
+    "imagem": "moleculas/2249.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "atorvastatin": {
+    "nome": "atorvastatin",
+    "cid": 60823,
+    "formula": "C33H35FN2O5",
+    "peso": "558.6",
+    "iupac": "(3R,5R)-7-[2-(4-fluorophenyl)-3-phenyl-4-(phenylcarbamoyl)-5-propan-2-ylpyrrol-1-yl]-3,5-dihydroxyheptanoic acid",
+    "imagem": "moleculas/60823.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "azithromycin": {
+    "nome": "azithromycin",
+    "cid": 447043,
+    "formula": "C38H72N2O12",
+    "peso": "749.0",
+    "iupac": "(2R,3S,4R,5R,8R,10R,11R,12S,13S,14R)-11-[(2S,3R,4S,6R)-4-(dimethylamino)-3-hydroxy-6-methyloxan-2-yl]oxy-2-ethyl-3,4,10-trihydroxy-13-[(2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyloxan-2-yl]oxy-3,5,6,8,10,12,14-heptamethyl-1-oxa-6-azacyclopentadecan-15-one",
+    "imagem": "moleculas/447043.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "beclomethasone dipropionate": {
+    "nome": "beclomethasone dipropionate",
+    "cid": 21700,
+    "formula": "C28H37ClO7",
+    "peso": "521.0",
+    "iupac": "[2-[(8S,9R,10S,11S,13S,14S,16S,17R)-9-chloro-11-hydroxy-10,13,16-trimethyl-3-oxo-17-propanoyloxy-6,7,8,11,12,14,15,16-octahydrocyclopenta[a]phenanthren-17-yl]-2-oxoethyl] propanoate",
+    "imagem": "moleculas/21700.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "bempedoic acid": {
+    "nome": "bempedoic acid",
+    "cid": 10472693,
+    "formula": "C19H36O5",
+    "peso": "344.5",
+    "iupac": "8-hydroxy-2,2,14,14-tetramethylpentadecanedioic acid",
+    "imagem": "moleculas/10472693.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "benzylpenicillin": {
+    "nome": "benzylpenicillin",
+    "cid": 5904,
+    "formula": "C16H18N2O4S",
+    "peso": "334.4",
+    "iupac": "(2S,5R,6R)-3,3-dimethyl-7-oxo-6-[(2-phenylacetyl)amino]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+    "imagem": "moleculas/5904.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "bezafibrate": {
+    "nome": "bezafibrate",
+    "cid": 39042,
+    "formula": "C19H20ClNO4",
+    "peso": "361.8",
+    "iupac": "2-[4-[2-[(4-chlorobenzoyl)amino]ethyl]phenoxy]-2-methylpropanoic acid",
+    "imagem": "moleculas/39042.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "budesonide": {
+    "nome": "budesonide",
+    "cid": 5281004,
+    "formula": "C25H34O6",
+    "peso": "430.5",
+    "iupac": "(1S,2S,4R,8S,9S,11S,12S,13R)-11-hydroxy-8-(2-hydroxyacetyl)-9,13-dimethyl-6-propyl-5,7-dioxapentacyclo[10.8.0.02,9.04,8.013,18]icosa-14,17-dien-16-one",
+    "imagem": "moleculas/5281004.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "bupropion": {
+    "nome": "bupropion",
+    "cid": 444,
+    "formula": "C13H18ClNO",
+    "peso": "239.74",
+    "iupac": "2-(tert-butylamino)-1-(3-chlorophenyl)propan-1-one",
+    "imagem": "moleculas/444.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "buspirone": {
+    "nome": "buspirone",
+    "cid": 2477,
+    "formula": "C21H31N5O2",
+    "peso": "385.5",
+    "iupac": "8-[4-(4-pyrimidin-2-ylpiperazin-1-yl)butyl]-8-azaspiro[4.5]decane-7,9-dione",
+    "imagem": "moleculas/2477.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "canagliflozin": {
+    "nome": "canagliflozin",
+    "cid": 24812758,
+    "formula": "C24H25FO5S",
+    "peso": "444.5",
+    "iupac": "(2S,3R,4R,5S,6R)-2-[3-[[5-(4-fluorophenyl)thiophen-2-yl]methyl]-4-methylphenyl]-6-(hydroxymethyl)oxane-3,4,5-triol",
+    "imagem": "moleculas/24812758.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "capecitabine": {
+    "nome": "capecitabine",
+    "cid": 60953,
+    "formula": "C15H22FN3O6",
+    "peso": "359.35",
+    "iupac": "pentyl N-[1-[(2R,3R,4S,5R)-3,4-dihydroxy-5-methyloxolan-2-yl]-5-fluoro-2-oxopyrimidin-4-yl]carbamate",
+    "imagem": "moleculas/60953.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "captopril": {
+    "nome": "captopril",
+    "cid": 44093,
+    "formula": "C9H15NO3S",
+    "peso": "217.29",
+    "iupac": "(2S)-1-[(2S)-2-methyl-3-sulfanylpropanoyl]pyrrolidine-2-carboxylic acid",
+    "imagem": "moleculas/44093.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "carboplatin": {
+    "nome": "carboplatin",
+    "cid": 426756,
+    "formula": "C6H12N2O4Pt",
+    "peso": "371.25",
+    "iupac": "azanide;cyclobutane-1,1-dicarboxylic acid;platinum(2+)",
+    "imagem": "moleculas/426756.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "carvedilol": {
+    "nome": "carvedilol",
+    "cid": 2585,
+    "formula": "C24H26N2O4",
+    "peso": "406.5",
+    "iupac": "1-(9H-carbazol-4-yloxy)-3-[2-(2-methoxyphenoxy)ethylamino]propan-2-ol",
+    "imagem": "moleculas/2585.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "cefepime": {
+    "nome": "cefepime",
+    "cid": 5479537,
+    "formula": "C19H24N6O5S2",
+    "peso": "480.6",
+    "iupac": "(6R,7R)-7-[[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-3-[(1-methylpyrrolidin-1-ium-1-yl)methyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",
+    "imagem": "moleculas/5479537.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ceftriaxone": {
+    "nome": "ceftriaxone",
+    "cid": 5479530,
+    "formula": "C18H18N8O7S3",
+    "peso": "554.6",
+    "iupac": "(6R,7R)-7-[[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-3-[(2-methyl-5,6-dioxo-1H-1,2,4-triazin-3-yl)sulfanylmethyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid",
+    "imagem": "moleculas/5479530.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "cefuroxime": {
+    "nome": "cefuroxime",
+    "cid": 5479529,
+    "formula": "C16H16N4O8S",
+    "peso": "424.4",
+    "iupac": "(6R,7R)-3-(carbamoyloxymethyl)-7-[[(2Z)-2-(furan-2-yl)-2-methoxyiminoacetyl]amino]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid",
+    "imagem": "moleculas/5479529.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "celecoxib": {
+    "nome": "celecoxib",
+    "cid": 2662,
+    "formula": "C17H14F3N3O2S",
+    "peso": "381.4",
+    "iupac": "4-[5-(4-methylphenyl)-3-(trifluoromethyl)pyrazol-1-yl]benzenesulfonamide",
+    "imagem": "moleculas/2662.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "cephalexin": {
+    "nome": "cephalexin",
+    "cid": 27447,
+    "formula": "C16H17N3O4S",
+    "peso": "347.4",
+    "iupac": "(6R,7R)-7-[[(2R)-2-amino-2-phenylacetyl]amino]-3-methyl-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid",
+    "imagem": "moleculas/27447.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "chlorthalidone": {
+    "nome": "chlorthalidone",
+    "cid": 2732,
+    "formula": "C14H11ClN2O4S",
+    "peso": "338.8",
+    "iupac": "2-chloro-5-(1-hydroxy-3-oxo-2H-isoindol-1-yl)benzenesulfonamide",
+    "imagem": "moleculas/2732.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ciprofibrate": {
+    "nome": "ciprofibrate",
+    "cid": 2763,
+    "formula": "C13H14Cl2O3",
+    "peso": "289.15",
+    "iupac": "2-[4-(2,2-dichlorocyclopropyl)phenoxy]-2-methylpropanoic acid",
+    "imagem": "moleculas/2763.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ciprofloxacin": {
+    "nome": "ciprofloxacin",
+    "cid": 2764,
+    "formula": "C17H18FN3O3",
+    "peso": "331.34",
+    "iupac": "1-cyclopropyl-6-fluoro-4-oxo-7-piperazin-1-ylquinoline-3-carboxylic acid",
+    "imagem": "moleculas/2764.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "cisplatin": {
+    "nome": "cisplatin",
+    "cid": 5702198,
+    "formula": "Cl2H6N2Pt",
+    "peso": "300.05",
+    "iupac": "azane;dichloroplatinum",
+    "imagem": "moleculas/5702198.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "citalopram": {
+    "nome": "citalopram",
+    "cid": 2771,
+    "formula": "C20H21FN2O",
+    "peso": "324.4",
+    "iupac": "1-[3-(dimethylamino)propyl]-1-(4-fluorophenyl)-3H-2-benzofuran-5-carbonitrile",
+    "imagem": "moleculas/2771.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "clarithromycin": {
+    "nome": "clarithromycin",
+    "cid": 84029,
+    "formula": "C38H69NO13",
+    "peso": "748.0",
+    "iupac": "(3R,4S,5S,6R,7R,9R,11R,12R,13S,14R)-6-[(2S,3R,4S,6R)-4-(dimethylamino)-3-hydroxy-6-methyloxan-2-yl]oxy-14-ethyl-12,13-dihydroxy-4-[(2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyloxan-2-yl]oxy-7-methoxy-3,5,7,9,11,13-hexamethyl-oxacyclotetradecane-2,10-dione",
+    "imagem": "moleculas/84029.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "clindamycin": {
+    "nome": "clindamycin",
+    "cid": 446598,
+    "formula": "C18H33ClN2O5S",
+    "peso": "425.0",
+    "iupac": "(2S,4R)-N-[(1S,2S)-2-chloro-1-[(2R,3R,4S,5R,6R)-3,4,5-trihydroxy-6-methylsulfanyloxan-2-yl]propyl]-1-methyl-4-propylpyrrolidine-2-carboxamide",
+    "imagem": "moleculas/446598.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "clonazepam": {
+    "nome": "clonazepam",
+    "cid": 2802,
+    "formula": "C15H10ClN3O3",
+    "peso": "315.71",
+    "iupac": "5-(2-chlorophenyl)-7-nitro-1,3-dihydro-1,4-benzodiazepin-2-one",
+    "imagem": "moleculas/2802.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "clonidine": {
+    "nome": "clonidine",
+    "cid": 2803,
+    "formula": "C9H9Cl2N3",
+    "peso": "230.09",
+    "iupac": "N-(2,6-dichlorophenyl)-4,5-dihydro-1H-imidazol-2-amine",
+    "imagem": "moleculas/2803.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "codeine": {
+    "nome": "codeine",
+    "cid": 5284371,
+    "formula": "C18H21NO3",
+    "peso": "299.4",
+    "iupac": "(4R,4aR,7S,7aR,12bS)-9-methoxy-3-methyl-2,4,4a,7,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinolin-7-ol",
+    "imagem": "moleculas/5284371.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "cyclophosphamide": {
+    "nome": "cyclophosphamide",
+    "cid": 2907,
+    "formula": "C7H15Cl2N2O2P",
+    "peso": "261.08",
+    "iupac": "N,N-bis(2-chloroethyl)-2-oxo-1,3,2lambda5-oxazaphosphinan-2-amine",
+    "imagem": "moleculas/2907.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "cytarabine": {
+    "nome": "cytarabine",
+    "cid": 6253,
+    "formula": "C9H13N3O5",
+    "peso": "243.22",
+    "iupac": "4-amino-1-[(2R,3S,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]pyrimidin-2-one",
+    "imagem": "moleculas/6253.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "dapagliflozin": {
+    "nome": "dapagliflozin",
+    "cid": 9887712,
+    "formula": "C21H25ClO6",
+    "peso": "408.9",
+    "iupac": "(2S,3R,4R,5S,6R)-2-[4-chloro-3-[(4-ethoxyphenyl)methyl]phenyl]-6-(hydroxymethyl)oxane-3,4,5-triol",
+    "imagem": "moleculas/9887712.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "daunorubicin": {
+    "nome": "daunorubicin",
+    "cid": 30323,
+    "formula": "C27H29NO10",
+    "peso": "527.5",
+    "iupac": "(7S,9S)-9-acetyl-7-[(2R,4S,5S,6S)-4-amino-5-hydroxy-6-methyloxan-2-yl]oxy-6,9,11-trihydroxy-4-methoxy-8,10-dihydro-7H-tetracene-5,12-dione",
+    "imagem": "moleculas/30323.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "desvenlafaxine": {
+    "nome": "desvenlafaxine",
+    "cid": 125017,
+    "formula": "C16H25NO2",
+    "peso": "263.37",
+    "iupac": "4-[2-(dimethylamino)-1-(1-hydroxycyclohexyl)ethyl]phenol",
+    "imagem": "moleculas/125017.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "dexamethasone": {
+    "nome": "dexamethasone",
+    "cid": 5743,
+    "formula": "C22H29FO5",
+    "peso": "392.5",
+    "iupac": "(8S,9R,10S,11S,13S,14S,16R,17R)-9-fluoro-11,17-dihydroxy-17-(2-hydroxyacetyl)-10,13,16-trimethyl-6,7,8,11,12,14,15,16-octahydrocyclopenta[a]phenanthren-3-one",
+    "imagem": "moleculas/5743.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "diazepam": {
+    "nome": "diazepam",
+    "cid": 3016,
+    "formula": "C16H13ClN2O",
+    "peso": "284.74",
+    "iupac": "7-chloro-1-methyl-5-phenyl-3H-1,4-benzodiazepin-2-one",
+    "imagem": "moleculas/3016.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "diclofenac": {
+    "nome": "diclofenac",
+    "cid": 3033,
+    "formula": "C14H11Cl2NO2",
+    "peso": "296.1",
+    "iupac": "2-[2-(2,6-dichloroanilino)phenyl]acetic acid",
+    "imagem": "moleculas/3033.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "docetaxel": {
+    "nome": "docetaxel",
+    "cid": 148124,
+    "formula": "C43H53NO14",
+    "peso": "807.9",
+    "iupac": "[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4-acetyloxy-1,9,12-trihydroxy-15-[(2R,3S)-2-hydroxy-3-[(2-methylpropan-2-yl)oxycarbonylamino]-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-13-en-2-yl] benzoate",
+    "imagem": "moleculas/148124.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "doxorubicin": {
+    "nome": "doxorubicin",
+    "cid": 31703,
+    "formula": "C27H29NO11",
+    "peso": "543.5",
+    "iupac": "(7S,9S)-7-[(2R,4S,5S,6S)-4-amino-5-hydroxy-6-methyloxan-2-yl]oxy-6,9,11-trihydroxy-9-(2-hydroxyacetyl)-4-methoxy-8,10-dihydro-7H-tetracene-5,12-dione",
+    "imagem": "moleculas/31703.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "doxycycline": {
+    "nome": "doxycycline",
+    "cid": 54671203,
+    "formula": "C22H24N2O8",
+    "peso": "444.4",
+    "iupac": "(4S,4aR,5S,5aR,6R,12aR)-4-(dimethylamino)-1,5,10,11,12a-pentahydroxy-6-methyl-3,12-dioxo-4a,5,5a,6-tetrahydro-4H-tetracene-2-carboxamide",
+    "imagem": "moleculas/54671203.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "duloxetine": {
+    "nome": "duloxetine",
+    "cid": 60835,
+    "formula": "C18H19NOS",
+    "peso": "297.4",
+    "iupac": "(3S)-N-methyl-3-naphthalen-1-yloxy-3-thiophen-2-ylpropan-1-amine",
+    "imagem": "moleculas/60835.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "empagliflozin": {
+    "nome": "empagliflozin",
+    "cid": 11949646,
+    "formula": "C23H27ClO7",
+    "peso": "450.9",
+    "iupac": "(2S,3R,4R,5S,6R)-2-[4-chloro-3-[[4-[(3S)-oxolan-3-yl]oxyphenyl]methyl]phenyl]-6-(hydroxymethyl)oxane-3,4,5-triol",
+    "imagem": "moleculas/11949646.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "enalapril": {
+    "nome": "enalapril",
+    "cid": 5388962,
+    "formula": "C20H28N2O5",
+    "peso": "376.4",
+    "iupac": "(2S)-1-[(2S)-2-[[(2S)-1-ethoxy-1-oxo-4-phenylbutan-2-yl]amino]propanoyl]pyrrolidine-2-carboxylic acid",
+    "imagem": "moleculas/5388962.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "erythromycin": {
+    "nome": "erythromycin",
+    "cid": 12560,
+    "formula": "C37H67NO13",
+    "peso": "733.9",
+    "iupac": "(3R,4S,5S,6R,7R,9R,11R,12R,13S,14R)-6-[(2S,3R,4S,6R)-4-(dimethylamino)-3-hydroxy-6-methyloxan-2-yl]oxy-14-ethyl-7,12,13-trihydroxy-4-[(2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyloxan-2-yl]oxy-3,5,7,9,11,13-hexamethyl-oxacyclotetradecane-2,10-dione",
+    "imagem": "moleculas/12560.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "escitalopram": {
+    "nome": "escitalopram",
+    "cid": 146570,
+    "formula": "C20H21FN2O",
+    "peso": "324.4",
+    "iupac": "(1S)-1-[3-(dimethylamino)propyl]-1-(4-fluorophenyl)-3H-2-benzofuran-5-carbonitrile",
+    "imagem": "moleculas/146570.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "esomeprazole": {
+    "nome": "esomeprazole",
+    "cid": 9568614,
+    "formula": "C17H19N3O3S",
+    "peso": "345.4",
+    "iupac": "6-methoxy-2-[(S)-(4-methoxy-3,5-dimethyl-2-pyridinyl)methylsulfinyl]-1H-benzimidazole",
+    "imagem": "moleculas/9568614.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ezetimibe": {
+    "nome": "ezetimibe",
+    "cid": 150311,
+    "formula": "C24H21F2NO3",
+    "peso": "409.4",
+    "iupac": "(3R,4S)-1-(4-fluorophenyl)-3-[(3S)-3-(4-fluorophenyl)-3-hydroxypropyl]-4-(4-hydroxyphenyl)azetidin-2-one",
+    "imagem": "moleculas/150311.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "famotidine": {
+    "nome": "famotidine",
+    "cid": 5702160,
+    "formula": "C8H15N7O2S3",
+    "peso": "337.5",
+    "iupac": "3-[[2-(diaminomethylideneamino)-1,3-thiazol-4-yl]methylsulfanyl]-N'-sulfamoylpropanimidamide",
+    "imagem": "moleculas/5702160.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "fenofibrate": {
+    "nome": "fenofibrate",
+    "cid": 3339,
+    "formula": "C20H21ClO4",
+    "peso": "360.8",
+    "iupac": "propan-2-yl 2-[4-(4-chlorobenzoyl)phenoxy]-2-methylpropanoate",
+    "imagem": "moleculas/3339.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "fenoterol": {
+    "nome": "fenoterol",
+    "cid": 3343,
+    "formula": "C17H21NO4",
+    "peso": "303.35",
+    "iupac": "5-[1-hydroxy-2-[1-(4-hydroxyphenyl)propan-2-ylamino]ethyl]benzene-1,3-diol",
+    "imagem": "moleculas/3343.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "fentanyl": {
+    "nome": "fentanyl",
+    "cid": 3345,
+    "formula": "C22H28N2O",
+    "peso": "336.5",
+    "iupac": "N-phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]propanamide",
+    "imagem": "moleculas/3345.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "fluconazole": {
+    "nome": "fluconazole",
+    "cid": 3365,
+    "formula": "C13H12F2N6O",
+    "peso": "306.27",
+    "iupac": "2-(2,4-difluorophenyl)-1,3-bis(1,2,4-triazol-1-yl)propan-2-ol",
+    "imagem": "moleculas/3365.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "fluorouracil": {
+    "nome": "fluorouracil",
+    "cid": 3385,
+    "formula": "C4H3FN2O2",
+    "peso": "130.08",
+    "iupac": "5-fluoro-1H-pyrimidine-2,4-dione",
+    "imagem": "moleculas/3385.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "fluoxetine": {
+    "nome": "fluoxetine",
+    "cid": 3386,
+    "formula": "C17H18F3NO",
+    "peso": "309.33",
+    "iupac": "N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine",
+    "imagem": "moleculas/3386.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "fluticasone propionate": {
+    "nome": "fluticasone propionate",
+    "cid": 444036,
+    "formula": "C25H31F3O5S",
+    "peso": "500.6",
+    "iupac": "[(6S,8S,9R,10S,11S,13S,14S,16R,17R)-6,9-difluoro-17-(fluoromethylsulfanylcarbonyl)-11-hydroxy-10,13,16-trimethyl-3-oxo-6,7,8,11,12,14,15,16-octahydrocyclopenta[a]phenanthren-17-yl] propanoate",
+    "imagem": "moleculas/444036.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "formoterol": {
+    "nome": "formoterol",
+    "cid": 3410,
+    "formula": "C19H24N2O4",
+    "peso": "344.4",
+    "iupac": "N-[2-hydroxy-5-[1-hydroxy-2-[1-(4-methoxyphenyl)propan-2-ylamino]ethyl]phenyl]formamide",
+    "imagem": "moleculas/3410.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "furosemide": {
+    "nome": "furosemide",
+    "cid": 3440,
+    "formula": "C12H11ClN2O5S",
+    "peso": "330.74",
+    "iupac": "4-chloro-2-(furan-2-ylmethylamino)-5-sulfamoylbenzoic acid",
+    "imagem": "moleculas/3440.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "gemcitabine": {
+    "nome": "gemcitabine",
+    "cid": 60750,
+    "formula": "C9H11F2N3O4",
+    "peso": "263.20",
+    "iupac": "4-amino-1-[(2R,4R,5R)-3,3-difluoro-4-hydroxy-5-(hydroxymethyl)oxolan-2-yl]pyrimidin-2-one",
+    "imagem": "moleculas/60750.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "gentamicin": {
+    "nome": "gentamicin",
+    "cid": 3467,
+    "formula": "C21H43N5O7",
+    "peso": "477.6",
+    "iupac": "2-[4,6-diamino-3-[3-amino-6-[1-(methylamino)ethyl]oxan-2-yl]oxy-2-hydroxycyclohexyl]oxy-5-methyl-4-(methylamino)oxane-3,5-diol",
+    "imagem": "moleculas/3467.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "gliclazide": {
+    "nome": "gliclazide",
+    "cid": 3475,
+    "formula": "C15H21N3O3S",
+    "peso": "323.4",
+    "iupac": "1-(3,3a,4,5,6,6a-hexahydro-1H-cyclopenta[c]pyrrol-2-yl)-3-(4-methylphenyl)sulfonylurea",
+    "imagem": "moleculas/3475.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "glimepiride": {
+    "nome": "glimepiride",
+    "cid": 3476,
+    "formula": "C24H34N4O5S",
+    "peso": "490.6",
+    "iupac": "4-ethyl-3-methyl-N-[2-[4-[(4-methylcyclohexyl)carbamoylsulfamoyl]phenyl]ethyl]-5-oxo-2H-pyrrole-1-carboxamide",
+    "imagem": "moleculas/3476.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "glyburide": {
+    "nome": "glyburide",
+    "cid": 3488,
+    "formula": "C23H28ClN3O5S",
+    "peso": "494.0",
+    "iupac": "5-chloro-N-[2-[4-(cyclohexylcarbamoylsulfamoyl)phenyl]ethyl]-2-methoxybenzamide",
+    "imagem": "moleculas/3488.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "hydralazine": {
+    "nome": "hydralazine",
+    "cid": 3637,
+    "formula": "C8H8N4",
+    "peso": "160.18",
+    "iupac": "phthalazin-1-ylhydrazine",
+    "imagem": "moleculas/3637.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "hydrochlorothiazide": {
+    "nome": "hydrochlorothiazide",
+    "cid": 3639,
+    "formula": "C7H8ClN3O4S2",
+    "peso": "297.7",
+    "iupac": "6-chloro-1,1-dioxo-3,4-dihydro-2H-1lambda6,2,4-benzothiadiazine-7-sulfonamide",
+    "imagem": "moleculas/3639.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "hydrocortisone": {
+    "nome": "hydrocortisone",
+    "cid": 5754,
+    "formula": "C21H30O5",
+    "peso": "362.5",
+    "iupac": "(8S,9S,10R,11S,13S,14S,17R)-11,17-dihydroxy-17-(2-hydroxyacetyl)-10,13-dimethyl-2,6,7,8,9,11,12,14,15,16-decahydro-1H-cyclopenta[a]phenanthren-3-one",
+    "imagem": "moleculas/5754.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ibuprofen": {
+    "nome": "ibuprofen",
+    "cid": 3672,
+    "formula": "C13H18O2",
+    "peso": "206.28",
+    "iupac": "2-[4-(2-methylpropyl)phenyl]propanoic acid",
+    "imagem": "moleculas/3672.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ifosfamide": {
+    "nome": "ifosfamide",
+    "cid": 3690,
+    "formula": "C7H15Cl2N2O2P",
+    "peso": "261.08",
+    "iupac": "N,3-bis(2-chloroethyl)-2-oxo-1,3,2lambda5-oxazaphosphinan-2-amine",
+    "imagem": "moleculas/3690.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "imatinib": {
+    "nome": "imatinib",
+    "cid": 5291,
+    "formula": "C29H31N7O",
+    "peso": "493.6",
+    "iupac": "4-[(4-methylpiperazin-1-yl)methyl]-N-[4-methyl-3-[(4-pyridin-3-ylpyrimidin-2-yl)amino]phenyl]benzamide",
+    "imagem": "moleculas/5291.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "indacaterol": {
+    "nome": "indacaterol",
+    "cid": 6918554,
+    "formula": "C24H28N2O3",
+    "peso": "392.5",
+    "iupac": "5-[(1R)-2-[(5,6-diethyl-2,3-dihydro-1H-inden-2-yl)amino]-1-hydroxyethyl]-8-hydroxy-1H-quinolin-2-one",
+    "imagem": "moleculas/6918554.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "indapamide": {
+    "nome": "indapamide",
+    "cid": 3702,
+    "formula": "C16H16ClN3O3S",
+    "peso": "365.8",
+    "iupac": "4-chloro-N-(2-methyl-2,3-dihydroindol-1-yl)-3-sulfamoylbenzamide",
+    "imagem": "moleculas/3702.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ipratropium": {
+    "nome": "ipratropium",
+    "cid": 657309,
+    "formula": "C20H30NO3+",
+    "peso": "332.5",
+    "iupac": "[(1R,5S)-8-methyl-8-propan-2-yl-8-azoniabicyclo[3.2.1]octan-3-yl] 3-hydroxy-2-phenylpropanoate",
+    "imagem": "moleculas/657309.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "itraconazole": {
+    "nome": "itraconazole",
+    "cid": 55283,
+    "formula": "C35H38Cl2N8O4",
+    "peso": "705.6",
+    "iupac": "2-butan-2-yl-4-[4-[4-[4-[[(2R,4S)-2-(2,4-dichlorophenyl)-2-(1,2,4-triazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy]phenyl]piperazin-1-yl]phenyl]-1,2,4-triazol-3-one",
+    "imagem": "moleculas/55283.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "ketoprofen": {
+    "nome": "ketoprofen",
+    "cid": 3825,
+    "formula": "C16H14O3",
+    "peso": "254.28",
+    "iupac": "2-(3-benzoylphenyl)propanoic acid",
+    "imagem": "moleculas/3825.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "lansoprazole": {
+    "nome": "lansoprazole",
+    "cid": 3883,
+    "formula": "C16H14F3N3O2S",
+    "peso": "369.4",
+    "iupac": "2-[[3-methyl-4-(2,2,2-trifluoroethoxy)-2-pyridinyl]methylsulfinyl]-1H-benzimidazole",
+    "imagem": "moleculas/3883.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "letrozole": {
+    "nome": "letrozole",
+    "cid": 3902,
+    "formula": "C17H11N5",
+    "peso": "285.30",
+    "iupac": "4-[(4-cyanophenyl)-(1,2,4-triazol-1-yl)methyl]benzonitrile",
+    "imagem": "moleculas/3902.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "leuprolide": {
+    "nome": "leuprolide",
+    "cid": 657181,
+    "formula": "C59H84N16O12",
+    "peso": "1209.4",
+    "iupac": "(2S)-N-[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2R)-1-[[(2S)-1-[[(2S)-5-(diaminomethylideneamino)-1-[(2S)-2-(ethylcarbamoyl)pyrrolidin-1-yl]-1-oxopentan-2-yl]amino]-4-methyl-1-oxopentan-2-yl]amino]-4-methyl-1-oxopentan-2-yl]amino]-3-(4-hydroxyphenyl)-1-oxopropan-2-yl]amino]-3-hydroxy-1-oxopropan-2-yl]amino]-3-(1H-indol-3-yl)-1-oxopropan-2-yl]amino]-3-(1H-imidazol-5-yl)-1-oxopropan-2-yl]-5-oxopyrrolidine-2-carboxamide",
+    "imagem": "moleculas/657181.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "levofloxacin": {
+    "nome": "levofloxacin",
+    "cid": 149096,
+    "formula": "C18H20FN3O4",
+    "peso": "361.4",
+    "iupac": "(2S)-7-fluoro-2-methyl-6-(4-methylpiperazin-1-yl)-10-oxo-4-oxa-1-azatricyclo[7.3.1.05,13]trideca-5(13),6,8,11-tetraene-11-carboxylic acid",
+    "imagem": "moleculas/149096.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "linagliptin": {
+    "nome": "linagliptin",
+    "cid": 10096344,
+    "formula": "C25H28N8O2",
+    "peso": "472.5",
+    "iupac": "8-[(3R)-3-aminopiperidin-1-yl]-7-but-2-ynyl-3-methyl-1-[(4-methylquinazolin-2-yl)methyl]purine-2,6-dione",
+    "imagem": "moleculas/10096344.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "liraglutide": {
+    "nome": "liraglutide",
+    "cid": 16134956,
+    "formula": "C172H265N43O51",
+    "peso": "3751",
+    "iupac": "(2S)-5-[[(5S)-5-[[(2S)-2-[[(2S)-2-[[(2S)-5-amino-2-[[2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S,3R)-2-[[(2S)-2-[[(2S,3R)-2-[[2-[[(2S)-2-[[(2S)-2-[[(2S)-2-amino-3-(1H-imidazol-5-yl)propanoyl]amino]propanoyl]amino]-4-carboxybutanoyl]amino]acetyl]amino]-3-hydroxybutanoyl]amino]-3-phenylpropanoyl]amino]-3-hydroxybutanoyl]amino]-3-hydroxypropanoyl]amino]-3-carboxypropanoyl]amino]-3-methylbutanoyl]amino]-3-hydroxypropanoyl]amino]-3-hydroxypropanoyl]amino]-3-(4-hydroxyphenyl)propanoyl]amino]-4-methylpentanoyl]amino]-4-carboxybutanoyl]amino]acetyl]amino]-5-oxopentanoyl]amino]propanoyl]amino]propanoyl]amino]-6-[[(2S)-1-[[(2S)-1-[[(2S,3S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-5-carbamimidamido-1-[[2-[[(2S)-5-carbamimidamido-1-(carboxymethylamino)-1-oxopentan-2-yl]amino]-2-oxoethyl]amino]-1-oxopentan-2-yl]amino]-3-methyl-1-oxobutan-2-yl]amino]-4-methyl-1-oxopentan-2-yl]amino]-3-(1H-indol-3-yl)-1-oxopropan-2-yl]amino]-1-oxopropan-2-yl]amino]-3-methyl-1-oxopentan-2-yl]amino]-1-oxo-3-phenylpropan-2-yl]amino]-4-carboxy-1-oxobutan-2-yl]amino]-6-oxohexyl]amino]-2-(hexadecanoylamino)-5-oxopentanoic acid",
+    "imagem": "moleculas/16134956.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "lisinopril": {
+    "nome": "lisinopril",
+    "cid": 5362119,
+    "formula": "C21H31N3O5",
+    "peso": "405.5",
+    "iupac": "(2S)-1-[(2S)-6-amino-2-[[(1S)-1-carboxy-3-phenylpropyl]amino]hexanoyl]pyrrolidine-2-carboxylic acid",
+    "imagem": "moleculas/5362119.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "lorazepam": {
+    "nome": "lorazepam",
+    "cid": 3958,
+    "formula": "C15H10Cl2N2O2",
+    "peso": "321.2",
+    "iupac": "7-chloro-5-(2-chlorophenyl)-3-hydroxy-1,3-dihydro-1,4-benzodiazepin-2-one",
+    "imagem": "moleculas/3958.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "losartan": {
+    "nome": "losartan",
+    "cid": 3961,
+    "formula": "C22H23ClN6O",
+    "peso": "422.9",
+    "iupac": "[2-butyl-5-chloro-3-[[4-[2-(2H-tetrazol-5-yl)phenyl]phenyl]methyl]imidazol-4-yl]methanol",
+    "imagem": "moleculas/3961.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "magnesium hydroxide": {
+    "nome": "magnesium hydroxide",
+    "cid": 73981,
+    "formula": "H2MgO2",
+    "peso": "58.320",
+    "iupac": "magnesium dihydroxide",
+    "imagem": "moleculas/73981.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "meloxicam": {
+    "nome": "meloxicam",
+    "cid": 54677470,
+    "formula": "C14H13N3O4S2",
+    "peso": "351.4",
+    "iupac": "4-hydroxy-2-methyl-N-(5-methyl-1,3-thiazol-2-yl)-1,1-dioxo-1lambda6,2-benzothiazine-3-carboxamide",
+    "imagem": "moleculas/54677470.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "meropenem": {
+    "nome": "meropenem",
+    "cid": 441130,
+    "formula": "C17H25N3O5S",
+    "peso": "383.5",
+    "iupac": "(4R,5S,6S)-3-[(3S,5S)-5-(dimethylcarbamoyl)pyrrolidin-3-yl]sulfanyl-6-[(1R)-1-hydroxyethyl]-4-methyl-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic acid",
+    "imagem": "moleculas/441130.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "metamizole": {
+    "nome": "metamizole",
+    "cid": 3111,
+    "formula": "C13H17N3O4S",
+    "peso": "311.36",
+    "iupac": "[(1,5-dimethyl-3-oxo-2-phenylpyrazol-4-yl)-methylamino]methanesulfonic acid",
+    "imagem": "moleculas/3111.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "metformin": {
+    "nome": "metformin",
+    "cid": 4091,
+    "formula": "C4H11N5",
+    "peso": "129.16",
+    "iupac": "3-(diaminomethylidene)-1,1-dimethylguanidine",
+    "imagem": "moleculas/4091.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "methotrexate": {
+    "nome": "methotrexate",
+    "cid": 126941,
+    "formula": "C20H22N8O5",
+    "peso": "454.4",
+    "iupac": "(2S)-2-[[4-[(2,4-diaminopteridin-6-yl)methyl-methylamino]benzoyl]amino]pentanedioic acid",
+    "imagem": "moleculas/126941.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "methyldopa": {
+    "nome": "methyldopa",
+    "cid": 38853,
+    "formula": "C10H13NO4",
+    "peso": "211.21",
+    "iupac": "(2S)-2-amino-3-(3,4-dihydroxyphenyl)-2-methylpropanoic acid",
+    "imagem": "moleculas/38853.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "metoprolol": {
+    "nome": "metoprolol",
+    "cid": 4171,
+    "formula": "C15H25NO3",
+    "peso": "267.36",
+    "iupac": "1-[4-(2-methoxyethyl)phenoxy]-3-(propan-2-ylamino)propan-2-ol",
+    "imagem": "moleculas/4171.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "metronidazole": {
+    "nome": "metronidazole",
+    "cid": 4173,
+    "formula": "C6H9N3O3",
+    "peso": "171.15",
+    "iupac": "2-(2-methyl-5-nitroimidazol-1-yl)ethanol",
+    "imagem": "moleculas/4173.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "mirtazapine": {
+    "nome": "mirtazapine",
+    "cid": 4205,
+    "formula": "C17H19N3",
+    "peso": "265.35",
+    "iupac": "5-methyl-2,5,19-triazatetracyclo[13.4.0.02,7.08,13]nonadeca-1(15),8,10,12,16,18-hexaene",
+    "imagem": "moleculas/4205.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "montelukast": {
+    "nome": "montelukast",
+    "cid": 5281040,
+    "formula": "C35H36ClNO3S",
+    "peso": "586.2",
+    "iupac": "2-[1-[[(1R)-1-[3-[(E)-2-(7-chloroquinolin-2-yl)ethenyl]phenyl]-3-[2-(2-hydroxypropan-2-yl)phenyl]propyl]sulfanylmethyl]cyclopropyl]acetic acid",
+    "imagem": "moleculas/5281040.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "morphine": {
+    "nome": "morphine",
+    "cid": 5288826,
+    "formula": "C17H19NO3",
+    "peso": "285.34",
+    "iupac": "(4R,4aR,7S,7aR,12bS)-3-methyl-2,4,4a,7,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinoline-7,9-diol",
+    "imagem": "moleculas/5288826.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "moxifloxacin": {
+    "nome": "moxifloxacin",
+    "cid": 152946,
+    "formula": "C21H24FN3O4",
+    "peso": "401.4",
+    "iupac": "7-[(4aS,7aS)-1,2,3,4,4a,5,7,7a-octahydropyrrolo[3,4-b]pyridin-6-yl]-1-cyclopropyl-6-fluoro-8-methoxy-4-oxoquinoline-3-carboxylic acid",
+    "imagem": "moleculas/152946.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "naltrexone": {
+    "nome": "naltrexone",
+    "cid": 5360515,
+    "formula": "C20H23NO4",
+    "peso": "341.4",
+    "iupac": "(4R,4aS,7aR,12bS)-3-(cyclopropylmethyl)-4a,9-dihydroxy-2,4,5,6,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinolin-7-one",
+    "imagem": "moleculas/5360515.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "naproxen": {
+    "nome": "naproxen",
+    "cid": 156391,
+    "formula": "C14H14O3",
+    "peso": "230.26",
+    "iupac": "(2S)-2-(6-methoxynaphthalen-2-yl)propanoic acid",
+    "imagem": "moleculas/156391.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "nifedipine": {
+    "nome": "nifedipine",
+    "cid": 4485,
+    "formula": "C17H18N2O6",
+    "peso": "346.3",
+    "iupac": "dimethyl 2,6-dimethyl-4-(2-nitrophenyl)-1,4-dihydropyridine-3,5-dicarboxylate",
+    "imagem": "moleculas/4485.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "nimesulide": {
+    "nome": "nimesulide",
+    "cid": 4495,
+    "formula": "C13H12N2O5S",
+    "peso": "308.31",
+    "iupac": "N-(4-nitro-2-phenoxyphenyl)methanesulfonamide",
+    "imagem": "moleculas/4495.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "nortriptyline": {
+    "nome": "nortriptyline",
+    "cid": 4543,
+    "formula": "C19H21N",
+    "peso": "263.4",
+    "iupac": "N-methyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,11,13-hexaenylidene)propan-1-amine",
+    "imagem": "moleculas/4543.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "olmesartan medoxomil": {
+    "nome": "olmesartan medoxomil",
+    "cid": 130881,
+    "formula": "C29H30N6O6",
+    "peso": "558.6",
+    "iupac": "(5-methyl-2-oxo-1,3-dioxol-4-yl)methyl 5-(2-hydroxypropan-2-yl)-2-propyl-3-[[4-[2-(2H-tetrazol-5-yl)phenyl]phenyl]methyl]imidazole-4-carboxylate",
+    "imagem": "moleculas/130881.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "omeprazole": {
+    "nome": "omeprazole",
+    "cid": 4594,
+    "formula": "C17H19N3O3S",
+    "peso": "345.4",
+    "iupac": "6-methoxy-2-[(4-methoxy-3,5-dimethyl-2-pyridinyl)methylsulfinyl]-1H-benzimidazole",
+    "imagem": "moleculas/4594.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "orlistat": {
+    "nome": "orlistat",
+    "cid": 3034010,
+    "formula": "C29H53NO5",
+    "peso": "495.7",
+    "iupac": "[(2S)-1-[(2S,3S)-3-hexyl-4-oxooxetan-2-yl]tridecan-2-yl] (2S)-2-formamido-4-methylpentanoate",
+    "imagem": "moleculas/3034010.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "oseltamivir": {
+    "nome": "oseltamivir",
+    "cid": 65028,
+    "formula": "C16H28N2O4",
+    "peso": "312.40",
+    "iupac": "ethyl (3R,4R,5S)-4-acetamido-5-amino-3-pentan-3-yloxycyclohexene-1-carboxylate",
+    "imagem": "moleculas/65028.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "osimertinib": {
+    "nome": "osimertinib",
+    "cid": 71496458,
+    "formula": "C28H33N7O2",
+    "peso": "499.6",
+    "iupac": "N-[2-[2-(dimethylamino)ethyl-methylamino]-4-methoxy-5-[[4-(1-methylindol-3-yl)pyrimidin-2-yl]amino]phenyl]prop-2-enamide",
+    "imagem": "moleculas/71496458.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "oxacillin": {
+    "nome": "oxacillin",
+    "cid": 6196,
+    "formula": "C19H19N3O5S",
+    "peso": "401.4",
+    "iupac": "(2S,5R,6R)-3,3-dimethyl-6-[(5-methyl-3-phenyl-1,2-oxazole-4-carbonyl)amino]-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+    "imagem": "moleculas/6196.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "oxaliplatin": {
+    "nome": "oxaliplatin",
+    "cid": 9887053,
+    "formula": "C8H14N2O4Pt",
+    "peso": "397.29",
+    "iupac": "[(1R,2R)-2-azanidylcyclohexyl]azanide;oxalic acid;platinum(2+)",
+    "imagem": "moleculas/9887053.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "oxycodone": {
+    "nome": "oxycodone",
+    "cid": 5284603,
+    "formula": "C18H21NO4",
+    "peso": "315.4",
+    "iupac": "(4R,4aS,7aR,12bS)-4a-hydroxy-9-methoxy-3-methyl-2,4,5,6,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinolin-7-one",
+    "imagem": "moleculas/5284603.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "paclitaxel": {
+    "nome": "paclitaxel",
+    "cid": 36314,
+    "formula": "C47H51NO14",
+    "peso": "853.9",
+    "iupac": "[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-13-en-2-yl] benzoate",
+    "imagem": "moleculas/36314.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "pantoprazole": {
+    "nome": "pantoprazole",
+    "cid": 4679,
+    "formula": "C16H15F2N3O4S",
+    "peso": "383.4",
+    "iupac": "6-(difluoromethoxy)-2-[(3,4-dimethoxy-2-pyridinyl)methylsulfinyl]-1H-benzimidazole",
+    "imagem": "moleculas/4679.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "paroxetine": {
+    "nome": "paroxetine",
+    "cid": 43815,
+    "formula": "C19H20FNO3",
+    "peso": "329.4",
+    "iupac": "(3S,4R)-3-(1,3-benzodioxol-5-yloxymethyl)-4-(4-fluorophenyl)piperidine",
+    "imagem": "moleculas/43815.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "pioglitazone": {
+    "nome": "pioglitazone",
+    "cid": 4829,
+    "formula": "C19H20N2O3S",
+    "peso": "356.4",
+    "iupac": "5-[[4-[2-(5-ethyl-2-pyridinyl)ethoxy]phenyl]methyl]-1,3-thiazolidine-2,4-dione",
+    "imagem": "moleculas/4829.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "pravastatin": {
+    "nome": "pravastatin",
+    "cid": 54687,
+    "formula": "C23H36O7",
+    "peso": "424.5",
+    "iupac": "(3R,5R)-7-[(1S,2S,6S,8S,8aR)-6-hydroxy-2-methyl-8-[(2S)-2-methylbutanoyl]oxy-1,2,6,7,8,8a-hexahydronaphthalen-1-yl]-3,5-dihydroxyheptanoic acid",
+    "imagem": "moleculas/54687.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "prednisolone": {
+    "nome": "prednisolone",
+    "cid": 5755,
+    "formula": "C21H28O5",
+    "peso": "360.4",
+    "iupac": "(8S,9S,10R,11S,13S,14S,17R)-11,17-dihydroxy-17-(2-hydroxyacetyl)-10,13-dimethyl-7,8,9,11,12,14,15,16-octahydro-6H-cyclopenta[a]phenanthren-3-one",
+    "imagem": "moleculas/5755.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "prednisone": {
+    "nome": "prednisone",
+    "cid": 5865,
+    "formula": "C21H26O5",
+    "peso": "358.4",
+    "iupac": "(8S,9S,10R,13S,14S,17R)-17-hydroxy-17-(2-hydroxyacetyl)-10,13-dimethyl-6,7,8,9,12,14,15,16-octahydrocyclopenta[a]phenanthrene-3,11-dione",
+    "imagem": "moleculas/5865.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "pregabalin": {
+    "nome": "pregabalin",
+    "cid": 5486971,
+    "formula": "C8H17NO2",
+    "peso": "159.23",
+    "iupac": "(3S)-3-(aminomethyl)-5-methylhexanoic acid",
+    "imagem": "moleculas/5486971.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "propranolol": {
+    "nome": "propranolol",
+    "cid": 4946,
+    "formula": "C16H21NO2",
+    "peso": "259.34",
+    "iupac": "1-naphthalen-1-yloxy-3-(propan-2-ylamino)propan-2-ol",
+    "imagem": "moleculas/4946.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "rosuvastatin": {
+    "nome": "rosuvastatin",
+    "cid": 446157,
+    "formula": "C22H28FN3O6S",
+    "peso": "481.5",
+    "iupac": "(E,3R,5S)-7-[4-(4-fluorophenyl)-2-[methyl(methylsulfonyl)amino]-6-propan-2-ylpyrimidin-5-yl]-3,5-dihydroxyhept-6-enoic acid",
+    "imagem": "moleculas/446157.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "salmeterol": {
+    "nome": "salmeterol",
+    "cid": 5152,
+    "formula": "C25H37NO4",
+    "peso": "415.6",
+    "iupac": "2-(hydroxymethyl)-4-[1-hydroxy-2-[6-(4-phenylbutoxy)hexylamino]ethyl]phenol",
+    "imagem": "moleculas/5152.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "semaglutide": {
+    "nome": "semaglutide",
+    "cid": 56843331,
+    "formula": "C187H291N45O59",
+    "peso": "4114",
+    "iupac": "18-[[(1R)-4-[2-[2-[2-[2-[2-[2-[[(5S)-5-[[(2S)-2-[[(2S)-2-[[(2S)-5-amino-2-[[2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S,3R)-2-[[(2S)-2-[[(2S,3R)-2-[[2-[[(2S)-2-[[2-[[(2S)-2-amino-3-(1H-imidazol-5-yl)propanoyl]amino]-2-methylpropanoyl]amino]-4-carboxybutanoyl]amino]acetyl]amino]-3-hydroxybutanoyl]amino]-3-phenylpropanoyl]amino]-3-hydroxybutanoyl]amino]-3-hydroxypropanoyl]amino]-3-carboxypropanoyl]amino]-3-methylbutanoyl]amino]-3-hydroxypropanoyl]amino]-3-hydroxypropanoyl]amino]-3-(4-hydroxyphenyl)propanoyl]amino]-4-methylpentanoyl]amino]-4-carboxybutanoyl]amino]acetyl]amino]-5-oxopentanoyl]amino]propanoyl]amino]propanoyl]amino]-6-[[(2S)-1-[[(2S)-1-[[(2S,3S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-5-carbamimidamido-1-[[2-[[(2S)-5-carbamimidamido-1-(carboxymethylamino)-1-oxopentan-2-yl]amino]-2-oxoethyl]amino]-1-oxopentan-2-yl]amino]-3-methyl-1-oxobutan-2-yl]amino]-4-methyl-1-oxopentan-2-yl]amino]-3-(1H-indol-3-yl)-1-oxopropan-2-yl]amino]-1-oxopropan-2-yl]amino]-3-methyl-1-oxopentan-2-yl]amino]-1-oxo-3-phenylpropan-2-yl]amino]-4-carboxy-1-oxobutan-2-yl]amino]-6-oxohexyl]amino]-2-oxoethoxy]ethoxy]ethylamino]-2-oxoethoxy]ethoxy]ethylamino]-1-carboxy-4-oxobutyl]amino]-18-oxooctadecanoic acid",
+    "imagem": "moleculas/56843331.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "sertraline": {
+    "nome": "sertraline",
+    "cid": 68617,
+    "formula": "C17H17Cl2N",
+    "peso": "306.2",
+    "iupac": "(1S,4S)-4-(3,4-dichlorophenyl)-N-methyl-1,2,3,4-tetrahydronaphthalen-1-amine",
+    "imagem": "moleculas/68617.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "sibutramine": {
+    "nome": "sibutramine",
+    "cid": 5210,
+    "formula": "C17H26ClN",
+    "peso": "279.8",
+    "iupac": "1-[1-(4-chlorophenyl)cyclobutyl]-N,N,3-trimethylbutan-1-amine",
+    "imagem": "moleculas/5210.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "simvastatin": {
+    "nome": "simvastatin",
+    "cid": 54454,
+    "formula": "C25H38O5",
+    "peso": "418.6",
+    "iupac": "[(1S,3R,7S,8S,8aR)-8-[2-[(2R,4R)-4-hydroxy-6-oxooxan-2-yl]ethyl]-3,7-dimethyl-1,2,3,7,8,8a-hexahydronaphthalen-1-yl] 2,2-dimethylbutanoate",
+    "imagem": "moleculas/54454.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "sitagliptin": {
+    "nome": "sitagliptin",
+    "cid": 4369359,
+    "formula": "C16H15F6N5O",
+    "peso": "407.31",
+    "iupac": "(3R)-3-amino-1-[3-(trifluoromethyl)-6,8-dihydro-5H-[1,2,4]triazolo[4,3-a]pyrazin-7-yl]-4-(2,4,5-trifluorophenyl)butan-1-one",
+    "imagem": "moleculas/4369359.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "sodium alginate": {
+    "erro": "HTTP 404"
+  },
+  "spironolactone": {
+    "nome": "spironolactone",
+    "cid": 5833,
+    "formula": "C24H32O4S",
+    "peso": "416.6",
+    "iupac": "S-[(7R,8R,9S,10R,13S,14S,17R)-10,13-dimethyl-3,5'-dioxospiro[2,6,7,8,9,11,12,14,15,16-decahydro-1H-cyclopenta[a]phenanthrene-17,2'-oxolane]-7-yl] ethanethioate",
+    "imagem": "moleculas/5833.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "sucralfate": {
+    "erro": "HTTP 404"
+  },
+  "sulfamethoxazole": {
+    "nome": "sulfamethoxazole",
+    "cid": 5329,
+    "formula": "C10H11N3O3S",
+    "peso": "253.28",
+    "iupac": "4-amino-N-(5-methyl-1,2-oxazol-3-yl)benzenesulfonamide",
+    "imagem": "moleculas/5329.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "tamoxifen": {
+    "nome": "tamoxifen",
+    "cid": 2733526,
+    "formula": "C26H29NO",
+    "peso": "371.5",
+    "iupac": "2-[4-[(Z)-1,2-diphenylbut-1-enyl]phenoxy]-N,N-dimethylethanamine",
+    "imagem": "moleculas/2733526.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "theophylline": {
+    "nome": "theophylline",
+    "cid": 2153,
+    "formula": "C7H8N4O2",
+    "peso": "180.16",
+    "iupac": "1,3-dimethyl-7H-purine-2,6-dione",
+    "imagem": "moleculas/2153.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "tiotropium": {
+    "nome": "tiotropium",
+    "cid": 5487427,
+    "formula": "C19H22NO4S2+",
+    "peso": "392.5",
+    "iupac": "[(1S,2S,4R,5R)-9,9-dimethyl-3-oxa-9-azoniatricyclo[3.3.1.02,4]nonan-7-yl] 2-hydroxy-2,2-dithiophen-2-ylacetate",
+    "imagem": "moleculas/5487427.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "tirzepatide": {
+    "nome": "tirzepatide",
+    "cid": 166567236,
+    "formula": "C225H348N48O68",
+    "peso": "4813",
+    "iupac": "20-[[(1S)-4-[2-[2-[2-[2-[2-[2-[[(5S)-5-[[(2S)-5-amino-2-[[(2S)-2-[[(2S,3S)-2-[[(2S)-6-amino-2-[[(2S)-2-[[(2S)-2-[[2-[[(2S,3S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S,3R)-2-[[(2S)-2-[[(2S,3R)-2-[[2-[[(2S)-2-[[2-[[(2S)-2-amino-3-(4-hydroxyphenyl)propanoyl]amino]-2-methylpropanoyl]amino]-4-carboxybutanoyl]amino]acetyl]amino]-3-hydroxybutanoyl]amino]-3-phenylpropanoyl]amino]-3-hydroxybutanoyl]amino]-3-hydroxypropanoyl]amino]-3-carboxypropanoyl]amino]-3-(4-hydroxyphenyl)propanoyl]amino]-3-hydroxypropanoyl]amino]-3-methylpentanoyl]amino]-2-methylpropanoyl]amino]-4-methylpentanoyl]amino]-3-carboxypropanoyl]amino]hexanoyl]amino]-3-methylpentanoyl]amino]propanoyl]amino]-5-oxopentanoyl]amino]-6-[[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-5-amino-1-[[(2S)-1-[[(2S)-1-[[(2S,3S)-1-[[(2S)-1-[[2-[[2-[(2S)-2-[[(2S)-1-[[(2S)-1-[[2-[[(2S)-1-[(2S)-2-[(2S)-2-[(2S)-2-[[(2S)-1-amino-3-hydroxy-1-oxopropan-2-yl]carbamoyl]pyrrolidine-1-carbonyl]pyrrolidine-1-carbonyl]pyrrolidin-1-yl]-1-oxopropan-2-yl]amino]-2-oxoethyl]amino]-3-hydroxy-1-oxopropan-2-yl]amino]-3-hydroxy-1-oxopropan-2-yl]carbamoyl]pyrrolidin-1-yl]-2-oxoethyl]amino]-2-oxoethyl]amino]-1-oxopropan-2-yl]amino]-3-methyl-1-oxopentan-2-yl]amino]-4-methyl-1-oxopentan-2-yl]amino]-3-(1H-indol-3-yl)-1-oxopropan-2-yl]amino]-1,5-dioxopentan-2-yl]amino]-3-methyl-1-oxobutan-2-yl]amino]-1-oxo-3-phenylpropan-2-yl]amino]-1-oxopropan-2-yl]amino]-6-oxohexyl]amino]-2-oxoethoxy]ethoxy]ethylamino]-2-oxoethoxy]ethoxy]ethylamino]-1-carboxy-4-oxobutyl]amino]-20-oxoicosanoic acid",
+    "imagem": "moleculas/166567236.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "tramadol": {
+    "nome": "tramadol",
+    "cid": 33741,
+    "formula": "C16H25NO2",
+    "peso": "263.37",
+    "iupac": "cis-(1R,2R)-2-[(dimethylamino)methyl]-1-(3-methoxyphenyl)cyclohexan-1-ol",
+    "imagem": "moleculas/33741.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "trimethoprim": {
+    "nome": "trimethoprim",
+    "cid": 5578,
+    "formula": "C14H18N4O3",
+    "peso": "290.32",
+    "iupac": "5-[(3,4,5-trimethoxyphenyl)methyl]pyrimidine-2,4-diamine",
+    "imagem": "moleculas/5578.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "umeclidinium": {
+    "nome": "umeclidinium",
+    "cid": 11519070,
+    "formula": "C29H34NO2+",
+    "peso": "428.6",
+    "iupac": "diphenyl-[1-(2-phenylmethoxyethyl)-1-azoniabicyclo[2.2.2]octan-4-yl]methanol",
+    "imagem": "moleculas/11519070.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "valacyclovir": {
+    "nome": "valacyclovir",
+    "cid": 135398742,
+    "formula": "C13H20N6O4",
+    "peso": "324.34",
+    "iupac": "2-[(2-amino-6-oxo-1H-purin-9-yl)methoxy]ethyl (2S)-2-amino-3-methylbutanoate",
+    "imagem": "moleculas/135398742.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "valsartan": {
+    "nome": "valsartan",
+    "cid": 60846,
+    "formula": "C24H29N5O3",
+    "peso": "435.5",
+    "iupac": "(2S)-3-methyl-2-[pentanoyl-[[4-[2-(2H-tetrazol-5-yl)phenyl]phenyl]methyl]amino]butanoic acid",
+    "imagem": "moleculas/60846.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "vancomycin": {
+    "nome": "vancomycin",
+    "cid": 14969,
+    "formula": "C66H75Cl2N9O24",
+    "peso": "1449.2",
+    "iupac": "(1S,2R,18R,19R,22S,25R,28R,40S)-48-[(2S,3R,4S,5S,6R)-3-[(2S,4S,5S,6S)-4-amino-5-hydroxy-4,6-dimethyloxan-2-yl]oxy-4,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-22-(2-amino-2-oxoethyl)-5,15-dichloro-2,18,32,35,37-pentahydroxy-19-[[(2R)-4-methyl-2-(methylamino)pentanoyl]amino]-20,23,26,42,44-pentaoxo-7,13-dioxa-21,24,27,41,43-pentazaoctacyclo[26.14.2.23,6.214,17.18,12.129,33.010,25.034,39]pentaconta-3,5,8(48),9,11,14,16,29(45),30,32,34(39),35,37,46,49-pentadecaene-40-carboxylic acid",
+    "imagem": "moleculas/14969.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "venlafaxine": {
+    "nome": "venlafaxine",
+    "cid": 5656,
+    "formula": "C17H27NO2",
+    "peso": "277.4",
+    "iupac": "1-[2-(dimethylamino)-1-(4-methoxyphenyl)ethyl]cyclohexan-1-ol",
+    "imagem": "moleculas/5656.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "vinblastine": {
+    "nome": "vinblastine",
+    "cid": 13342,
+    "formula": "C46H58N4O9",
+    "peso": "811.0",
+    "iupac": "methyl (1R,9R,10S,11R,12R,19R)-11-acetyloxy-12-ethyl-4-[(13S,15R,17S)-17-ethyl-17-hydroxy-13-methoxycarbonyl-1,11-diazatetracyclo[13.3.1.04,12.05,10]nonadeca-4(12),5,7,9-tetraen-13-yl]-10-hydroxy-5-methoxy-8-methyl-8,16-diazapentacyclo[10.6.1.01,9.02,7.016,19]nonadeca-2,4,6,13-tetraene-10-carboxylate",
+    "imagem": "moleculas/13342.png",
+    "obtidoEm": "2026-11-10"
+  },
+  "vincristine": {
+    "nome": "vincristine",
+    "cid": 5978,
+    "formula": "C46H56N4O10",
+    "peso": "825.0",
+    "iupac": "methyl (1R,9R,10S,11R,12R,19R)-11-acetyloxy-12-ethyl-4-[(13S,15S,17S)-17-ethyl-17-hydroxy-13-methoxycarbonyl-1,11-diazatetracyclo[13.3.1.04,12.05,10]nonadeca-4(12),5,7,9-tetraen-13-yl]-8-formyl-10-hydroxy-5-methoxy-8,16-diazapentacyclo[10.6.1.01,9.02,7.016,19]nonadeca-2,4,6,13-tetraene-10-carboxylate",
+    "imagem": "moleculas/5978.png",
+    "obtidoEm": "2026-11-10"
+  }
+}

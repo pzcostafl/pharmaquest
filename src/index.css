@@ -1,0 +1,128 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --color-petroleo-50: #eef7f8;
+  --color-petroleo-100: #d5ecee;
+  --color-petroleo-200: #acd8dc;
+  --color-petroleo-300: #79bcc3;
+  --color-petroleo-400: #4a9aa3;
+  --color-petroleo-500: #2c7d87;
+  --color-petroleo-600: #1d6670;
+  --color-petroleo-700: #0f5c66;
+  --color-petroleo-800: #0c4950;
+  --color-petroleo-900: #0a3a40;
+  --color-petroleo-950: #062529;
+  --color-acerto-50: #effaf4;
+  --color-acerto-100: #d8f2e3;
+  --color-acerto-500: #3fa772;
+  --color-acerto-600: #2f8a5c;
+  --color-acerto-700: #24704a;
+  --color-erro-50: #fdf3f2;
+  --color-erro-100: #f9e0dd;
+  --color-erro-500: #c8574c;
+  --color-erro-600: #ad453b;
+  --color-erro-700: #8f372f;
+  --color-parcial-50: #fdf8ec;
+  --color-parcial-100: #f8ebc8;
+  --color-parcial-500: #c9971f;
+  --color-parcial-600: #a87b16;
+  --color-parcial-700: #8a6411;
+}
+
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+  /* Tema preto: fundo preto puro (OLED) e superfícies grafite neutras */
+  --color-slate-950: #000000;
+  --color-slate-900: #111113;
+  --color-slate-800: #1e1e21;
+  --color-slate-700: #2e2e33;
+  --color-petroleo-950: #04191c;
+}
+
+html,
+body {
+  @apply bg-slate-50 text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+body {
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-petroleo-500 disabled:cursor-not-allowed disabled:opacity-50;
+}
+@layer components {
+.cartao {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900;
+}
+
+.btn-primario {
+  @apply btn bg-petroleo-700 text-white hover:bg-petroleo-800 dark:bg-petroleo-500 dark:hover:bg-petroleo-400 dark:text-slate-950;
+}
+.btn-secundario {
+  @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800;
+}
+.btn-fantasma {
+  @apply btn text-petroleo-700 hover:bg-petroleo-50 dark:text-petroleo-300 dark:hover:bg-slate-800;
+}
+
+.campo {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-base outline-none transition placeholder:text-slate-400 focus:border-petroleo-500 focus:ring-2 focus:ring-petroleo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-petroleo-800;
+}
+
+.rotulo {
+  @apply text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400;
+}
+
+.selo {
+  @apply inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-medium;
+}
+
+}
+
+.prosa p {
+  @apply mb-3 leading-relaxed;
+}
+.prosa ul {
+  @apply mb-3 list-disc space-y-1 pl-5;
+}
+
+@keyframes surgir {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.surgir {
+  animation: surgir 0.28s ease-out both;
+}
+@keyframes pulsar-ok {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.015); }
+  100% { transform: scale(1); }
+}
+.pulsar {
+  animation: pulsar-ok 0.35s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .surgir, .pulsar { animation: none; }
+}
+
+/* ---------- toque / celular / iPad ---------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+button, a, [role='radio'] {
+  touch-action: manipulation;
+}
+@media (max-width: 1023px) {
+  /* iOS dá zoom em campos com fonte < 16px */
+  input, select, textarea { font-size: 16px !important; }
+}
+.sem-barra::-webkit-scrollbar { display: none; }
+.sem-barra { scrollbar-width: none; }
