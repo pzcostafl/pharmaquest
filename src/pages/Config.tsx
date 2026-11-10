@@ -84,7 +84,7 @@ export function BoasVindas() {
     <div className="flex min-h-dvh items-center justify-center bg-gradient-to-br from-petroleo-50 to-slate-50 p-4 pt-[max(1rem,env(safe-area-inset-top))] dark:from-petroleo-950 dark:to-slate-950">
       <div className="cartao surgir w-full max-w-md p-6 sm:p-7">
         <img src="./icone.svg" alt="" className="h-12 w-12" />
-        <h1 className="mt-4 text-2xl font-bold">PharmaQuest</h1>
+        <h1 className="mt-4 text-2xl font-bold">Pharma Ju Sales</h1>
         <p className="text-sm text-slate-500">Desafio da Farmacologia</p>
         <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">Estude os principais princípios ativos em três fases: grupo terapêutico, classe farmacológica e mecanismo, nomes comerciais e efeitos adversos.</p>
         {!semConta ? (

@@ -35,7 +35,7 @@ export function Home() {
       {/* Título e apresentação — y 12–25% */}
       <section className="surgir mb-6 sm:mb-8">
         <p className="rotulo text-petroleo-700 dark:text-petroleo-300">Aprendizagem progressiva em três fases</p>
-        <h1 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">PharmaQuest — Desafio da Farmacologia</h1>
+        <h1 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Pharma Ju Sales — Desafio da Farmacologia</h1>
         <p className="mt-2 max-w-3xl text-slate-600 dark:text-slate-300">
           Escolha uma pasta terapêutica e domine cada princípio ativo: <strong>grupo terapêutico</strong> → <strong>classe farmacológica e mecanismo</strong> → <strong>nomes comerciais e efeitos adversos</strong>.
         </p>

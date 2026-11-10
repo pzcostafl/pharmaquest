@@ -13,7 +13,7 @@ export function aplicarTema(t: TemaPref) {
   try { localStorage.setItem('pq:tema', JSON.stringify(t)); } catch { /* */ }
   const escuro = t === 'escuro' || (t === 'sistema' && matchMedia('(prefers-color-scheme: dark)').matches);
   document.documentElement.classList.toggle('dark', escuro);
-  document.querySelector('meta[name=theme-color]')?.setAttribute('content', escuro ? '#000000' : '#0f5c66');
+  document.querySelector('meta[name=theme-color]')?.setAttribute('content', escuro ? '#000000' : '#7e22ce');
   window.dispatchEvent(new Event('pq-tema'));
 }
 
@@ -50,10 +50,10 @@ export function Layout({ children }: { children: ReactNode }) {
     <div className="flex min-h-dvh flex-col">
       <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 pt-[env(safe-area-inset-top)] backdrop-blur dark:border-slate-800 dark:bg-slate-950/85">
         <div className="mx-auto flex h-14 w-full max-w-[1400px] items-center gap-3 px-4 sm:h-16 lg:w-[88%] lg:px-0">
-          <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label="PharmaQuest — início">
+          <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label="Pharma Ju Sales — início">
             <img src="./icone.svg" alt="" className="h-8 w-8 shrink-0" />
             <span className="min-w-0 leading-tight">
-              <span className="block truncate text-[15px] font-bold tracking-tight text-petroleo-800 dark:text-petroleo-200">PharmaQuest</span>
+              <span className="block truncate text-[15px] font-bold tracking-tight text-petroleo-800 dark:text-petroleo-200">Pharma Ju Sales</span>
               <span className="hidden text-[11px] text-slate-500 sm:block">Desafio da Farmacologia</span>
             </span>
           </Link>
@@ -91,7 +91,7 @@ export function Layout({ children }: { children: ReactNode }) {
       {!foco && (
         <footer className="hidden border-t border-slate-200 py-5 text-center text-xs text-slate-500 lg:block dark:border-slate-800">
           <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-x-4 gap-y-1 px-4">
-            <span>PharmaQuest · conteúdo educacional, não constitui prescrição.</span>
+            <span>Pharma Ju Sales · conteúdo educacional, não constitui prescrição.</span>
             <Link to="/admin" className="underline decoration-dotted">Área administrativa</Link>
             <span>Estruturas: PubChem (NIH/NLM)</span>
           </div>

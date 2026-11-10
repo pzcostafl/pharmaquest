@@ -2,24 +2,25 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Paleta roxa (Pharma Ju Sales). O nome 'petroleo' ficou só como token interno. */
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --color-petroleo-50: #eef7f8;
-  --color-petroleo-100: #d5ecee;
-  --color-petroleo-200: #acd8dc;
-  --color-petroleo-300: #79bcc3;
-  --color-petroleo-400: #4a9aa3;
-  --color-petroleo-500: #2c7d87;
-  --color-petroleo-600: #1d6670;
-  --color-petroleo-700: #0f5c66;
-  --color-petroleo-800: #0c4950;
-  --color-petroleo-900: #0a3a40;
-  --color-petroleo-950: #062529;
-  --color-acerto-50: #effaf4;
-  --color-acerto-100: #d8f2e3;
-  --color-acerto-500: #3fa772;
-  --color-acerto-600: #2f8a5c;
-  --color-acerto-700: #24704a;
+  --color-petroleo-50: #faf5ff;
+  --color-petroleo-100: #f3e8ff;
+  --color-petroleo-200: #e9d5ff;
+  --color-petroleo-300: #d8b4fe;
+  --color-petroleo-400: #c084fc;
+  --color-petroleo-500: #a855f7;
+  --color-petroleo-600: #9333ea;
+  --color-petroleo-700: #7e22ce;
+  --color-petroleo-800: #6b21a8;
+  --color-petroleo-900: #581c87;
+  --color-petroleo-950: #3b0764;
+  --color-acerto-50: #f5f3ff;
+  --color-acerto-100: #ede9fe;
+  --color-acerto-500: #8b5cf6;
+  --color-acerto-600: #7c3aed;
+  --color-acerto-700: #6d28d9;
   --color-erro-50: #fdf3f2;
   --color-erro-100: #f9e0dd;
   --color-erro-500: #c8574c;
@@ -42,7 +43,7 @@
   --color-slate-900: #111113;
   --color-slate-800: #1e1e21;
   --color-slate-700: #2e2e33;
-  --color-petroleo-950: #04191c;
+  --color-petroleo-950: #1a0530;
 }
 
 html,

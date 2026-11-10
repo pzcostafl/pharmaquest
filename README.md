@@ -1,4 +1,4 @@
-# PharmaQuest — Desafio da Farmacologia
+# Pharma Ju Sales — Desafio da Farmacologia
 
 Jogo de estudo de farmacologia para estudantes de Farmácia, com 11 pastas terapêuticas e 168 princípios ativos cadastrados (161 jogáveis). Cada medicamento passa por 3 fases: grupo terapêutico → classe farmacológica e mecanismo → nomes comerciais e efeitos adversos. Funciona no celular, no iPad e no computador, inclusive sem internet.
 
