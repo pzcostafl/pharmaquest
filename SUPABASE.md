@@ -21,12 +21,8 @@ Em **Authentication → URL Configuration**, preencha **Site URL** com o endere�
 ## 3. Ligar o app ao projeto
 Em **Project Settings → API**, copie a **Project URL** e a chave **anon public**.
 
-- **Para rodar no computador:** copie `.env.example` para `.env.local` e cole os dois valores.
-- **Para o site publicado no GitHub Pages:** no repositório, vá em **Settings → Secrets and variables → Actions → aba Variables** e crie:
-  - `VITE_SUPABASE_URL`
-  - `VITE_SUPABASE_ANON_KEY`
-
-  Depois, rode de novo o workflow *Publicar no GitHub Pages*.
+- **Site publicado:** os dois valores ficam em `PUBLICADO`, no arquivo [`src/lib/supabase.ts`](src/lib/supabase.ts), e valem só no build de produção. Projeto atual: `cwwzxhfuoixpdqhgsifs` (São Paulo). Para trocar de projeto, edite ali e faça push.
+- **Para rodar no computador com a nuvem:** copie `.env.example` para `.env.local` e cole os dois valores. Sem isso, o `npm run dev` fica no modo local.
 
 A chave *anon* é pública por definição: ela vai dentro do app de qualquer jeito. Quem protege os dados são as regras RLS do banco. **Nunca** use a chave `service_role` no app.
 
