@@ -43,6 +43,7 @@ const P: Record<string, string> = {
   menu: 'M4 7h16M4 12h16M4 17h16',
   editar: 'M4 20h4L19 9l-4-4L4 16v4Z',
   mais: 'M12 5v14M5 12h14',
+  capsulas: 'M4.6 12.4 11.4 5.6a3.5 3.5 0 0 1 5 5l-6.8 6.8a3.5 3.5 0 0 1-5-5ZM8 9l5 5M15.5 15a3 3 0 1 0 6 0 3 3 0 1 0-6 0Zm1-2 4 4',
 };
 
 export function Icone({ nome, className = 'h-5 w-5', preenchido = false }: { nome: string; className?: string; preenchido?: boolean }) {

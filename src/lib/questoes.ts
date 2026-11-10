@@ -6,14 +6,22 @@ import { compararFormas, conceitosEncontrados, normalizar, type Conceito } from 
 
 export type Fase = 'f1' | 'f2' | 'f3a' | 'f3b';
 export type Formato = 'mc' | 'dis';
+/** Todas as etapas registradas no histórico (as chaves antigas continuam válidas). */
 export const FASES: Fase[] = ['f1', 'f2', 'f3a', 'f3b'];
+/**
+ * Fases jogadas dentro de uma pasta. O grupo terapêutico (f1) saiu das pastas, porque o
+ * aluno já sabe o grupo ao escolher a pasta; ele é cobrado só no Desafio Geral.
+ */
+export const FASES_MODULO: Fase[] = ['f2', 'f3a', 'f3b'];
 export const ROTULO_FASE: Record<Fase, string> = {
-  f1: 'Fase 1 · Grupo terapêutico',
-  f2: 'Fase 2 · Classe farmacológica',
-  f3a: 'Fase 3A · Nomes comerciais',
-  f3b: 'Fase 3B · Efeitos adversos',
+  f1: 'Desafio Geral · Grupo terapêutico',
+  f2: 'Fase 1 · Classe farmacológica',
+  f3a: 'Fase 2A · Nomes comerciais',
+  f3b: 'Fase 2B · Efeitos adversos',
 };
 export const ROTULO_FASE_CURTO: Record<Fase, string> = { f1: 'Grupo', f2: 'Classe', f3a: 'Marcas', f3b: 'Efeitos' };
+/** Número exibido da fase dentro da pasta. */
+export const NUMERO_FASE: Record<Fase, string> = { f1: 'Desafio', f2: 'Fase 1', f3a: 'Fase 2A', f3b: 'Fase 2B' };
 
 export interface Questao {
   chave: string; // grupo:med:fase
@@ -81,9 +89,10 @@ export function gerarQuestao(m: Medicamento, g: GrupoId, fase: Fase, formato: Fo
   const nomeGrupo = grupos.find((x) => x.id === g)?.nome ?? g;
 
   if (fase === 'f1') {
-    const enunciado = multi
-      ? `Considerando o uso do ${m.nome.toLowerCase()} no(a) ${v.contexto}, a qual grupo terapêutico ele pertence?`
-      : `A qual grupo terapêutico pertence o(a) ${m.nome.toLowerCase()}?`;
+    // Desafio Geral: pergunta neutra, sem revelar a pasta de origem. Fármacos de mais de um
+    // grupo não ficam ambíguos: na múltipla escolha só aparece um dos grupos dele, e no
+    // dissertativo qualquer um dos seus grupos é aceito.
+    const enunciado = `A qual grupo terapêutico pertence o(a) ${m.nome.toLowerCase()}?`;
     const q: Questao = { ...base, enunciado, explicacao: v.explicacaoFase1 };
     if (formato === 'mc') {
       const proprios = new Set(m.vinculos.map((x) => x.grupoId));
@@ -188,7 +197,8 @@ export function corrigir(q: Questao, resposta: string): Correcao {
       if (!gm) continue;
       const res = compararFormas(r, [gm.nome, gm.nomeCurto, ...gm.sinonimos]);
       if (res.score === 1) {
-        const outro = x.grupoId !== g ? ` (Neste módulo, o foco é: ${grupos.find((y) => y.id === g)?.nome}.)` : '';
+        const outros = m.vinculos.filter((y) => y.grupoId !== x.grupoId).map((y) => grupos.find((z) => z.id === y.grupoId)?.nome).filter(Boolean);
+        const outro = outros.length ? ` Ele também é usado como: ${outros.join(', ')}.` : '';
         return { resultado: 'certo', pontosFracao: 1, mensagem: `Correto — ${gm.nome}.${outro}`, esperado };
       }
     }

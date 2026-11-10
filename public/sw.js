@@ -1,10 +1,12 @@
 // Service worker do PharmaQuest — cache do app e das estruturas moleculares para uso offline.
-const CACHE = 'pharmaquest-v3';
+const CACHE = 'pharmaquest-v4';
+// estruturas baixadas pelo botão "Baixar para offline": cache próprio, que sobrevive às atualizações
+const MOLECULAS = 'pharmaquest-moleculas';
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', './index.html', './icone.png', './icone-180.png', './manifest.webmanifest'])).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', (e) => {
-  e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
+  e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE && k !== MOLECULAS).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
 });
 self.addEventListener('fetch', (e) => {
   const req = e.request;

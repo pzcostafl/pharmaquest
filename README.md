@@ -1,6 +1,6 @@
 # Pharma Ju Sales — Desafio da Farmacologia
 
-Jogo de estudo de farmacologia para estudantes de Farmácia, com 11 pastas terapêuticas e 168 princípios ativos cadastrados (161 jogáveis). Cada medicamento passa por 3 fases: grupo terapêutico → classe farmacológica e mecanismo → nomes comerciais e efeitos adversos. Funciona no celular, no iPad e no computador, inclusive sem internet.
+Jogo de estudo de farmacologia para estudantes de Farmácia, com 11 pastas terapêuticas e 168 princípios ativos cadastrados (161 jogáveis). Dentro de cada pasta, o medicamento passa por 2 fases: classe farmacológica e mecanismo → nomes comerciais e efeitos adversos. O grupo terapêutico é cobrado no **Desafio Geral**, que mistura princípios ativos de todas as pastas (10, 20, 30 ou 55 questões; na rodada completa, 5 de cada grupo, escolhidos entre os principais de `src/lib/desafio.ts`). Funciona no celular, no iPad e no computador, inclusive sem internet.
 
 ## Rodar
 ```bash

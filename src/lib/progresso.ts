@@ -1,7 +1,7 @@
 // Estado persistente do estudante (por perfil), salvo no armazenamento local do navegador.
 import { useSyncExternalStore } from 'react';
 import type { Fase, Formato, Resultado } from './questoes';
-import { chaveItem, FASES, parseChave } from './questoes';
+import { chaveItem, FASES_MODULO, parseChave } from './questoes';
 
 export type Modo = 'mc' | 'dis' | 'misto';
 export type Tema = 'claro' | 'escuro' | 'sistema';
@@ -30,7 +30,16 @@ export interface EventoHist {
   resultado: Resultado;
   formato: Formato;
   pontos: number;
-  origem: 'estudo' | 'revisao' | 'simulado' | 'erradas';
+  origem: 'estudo' | 'revisao' | 'simulado' | 'erradas' | 'desafio';
+}
+
+export interface RodadaDesafio {
+  ts: number;
+  total: number;
+  acertos: number;
+  parciais: number;
+  completo: boolean;
+  porGrupo: Record<string, { acertos: number; total: number }>;
 }
 
 export interface Perfil {
@@ -63,6 +72,8 @@ export interface Estado {
   salvas: string[]; // chaves de questão
   conquistas: Record<string, number>;
   simulados: { ts: number; grupoId: string; acertos: number; total: number }[];
+  /** rodadas do Desafio Geral: acertos e total por grupo terapêutico */
+  desafios: RodadaDesafio[];
   revisoesRapidas: number;
   offline: string[]; // grupos baixados
   /** última alteração local (ms) — usado na sincronização */
@@ -72,7 +83,7 @@ export interface Estado {
 const novoEstado = (): Estado => ({
   versao: 1, modo: 'mc', modoEscolhido: false, pontos: 0, itens: {}, concluidos: {}, ciclos: {}, posicao: {},
   erroNoMed: {}, sequenciaSemErro: 0, melhorSequencia: 0, gruposConcluidos: {}, bonusPasta: {}, bonusMed: {},
-  historico: [], favoritos: [], salvas: [], conquistas: {}, simulados: [], revisoesRapidas: 0, offline: [], atualizadoEm: 0,
+  historico: [], favoritos: [], salvas: [], conquistas: {}, simulados: [], desafios: [], revisoesRapidas: 0, offline: [], atualizadoEm: 0,
 });
 
 // ---------------- perfis ----------------
@@ -235,7 +246,7 @@ export const cicloDe = (e: Estado, g: string) => e.ciclos[g] ?? 0;
 export const medConcluido = (e: Estado, g: string, m: string) => (e.concluidos[`${g}|${m}`] ?? []).includes(cicloDe(e, g));
 export const medConcluidoAlgumaVez = (e: Estado, g: string, m: string) => (e.concluidos[`${g}|${m}`] ?? []).length > 0;
 
-/** Marca o medicamento como concluído (após as fases 1, 2, 3A e 3B). Retorna bônus ganhos. */
+/** Marca o medicamento como concluído (após as fases da pasta). Retorna bônus ganhos. */
 export function concluirMedicamento(g: string, medId: string, todosDoGrupo: string[]): { bonusMed: number; bonusPasta: number; pastaConcluida: boolean } {
   const r = { bonusMed: 0, bonusPasta: 0, pastaConcluida: false };
   atualizar((e) => {
@@ -268,6 +279,10 @@ export function reiniciarGrupo(g: string) {
   });
 }
 
+export function registrarDesafio(r: Omit<RodadaDesafio, 'ts'>) {
+  atualizar((e) => { e.desafios = [...(e.desafios ?? []), { ts: Date.now(), ...r }].slice(-200); });
+}
+
 export function salvarPosicao(g: string, medId: string, fase: Fase | 'ficha') {
   atualizar((e) => { e.posicao[g] = { medId, fase }; });
 }
@@ -296,8 +311,8 @@ export function dominioItem(it: ItemStat | undefined): number {
 export function dominioGrupo(e: Estado, g: string, medIds: string[]): number {
   if (!medIds.length) return 0;
   let s = 0;
-  for (const m of medIds) for (const f of FASES) s += dominioItem(e.itens[chaveItem(g, m, f)]);
-  return s / (medIds.length * FASES.length);
+  for (const m of medIds) for (const f of FASES_MODULO) s += dominioItem(e.itens[chaveItem(g, m, f)]);
+  return s / (medIds.length * FASES_MODULO.length);
 }
 
 export function nivelDominio(d: number, iniciado: boolean): string {
@@ -311,7 +326,7 @@ export function nivelDominio(d: number, iniciado: boolean): string {
 
 export function statsGrupo(e: Estado, g: string, medIds: string[]) {
   let acertos = 0, erros = 0, parciais = 0;
-  for (const m of medIds) for (const f of FASES) {
+  for (const m of medIds) for (const f of FASES_MODULO) {
     const it = e.itens[chaveItem(g, m, f)];
     if (it) { acertos += it.acertos; erros += it.erros; parciais += it.parciais; }
   }

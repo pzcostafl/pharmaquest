@@ -12,6 +12,7 @@ import { Biblioteca, FichaPagina } from './pages/Biblioteca';
 import { Desempenho } from './pages/Desempenho';
 import { BoasVindas, Config } from './pages/Config';
 import { Admin } from './pages/Admin';
+import { Desafio } from './pages/Desafio';
 
 export default function App() {
   const perfil = usePerfil();
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/simulado/:g" element={<Quiz simulado />} />
             <Route path="/resumo/:g" element={<Resumo />} />
             <Route path="/ficha/:id" element={<FichaPagina />} />
+            <Route path="/desafio/*" element={<Desafio />} />
             <Route path="/revisao" element={<MinhaRevisao />} />
             <Route path="/biblioteca" element={<Biblioteca />} />
             <Route path="/desempenho" element={<Desempenho />} />

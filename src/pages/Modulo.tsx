@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useBanco } from '../lib/hooks';
 import { listarGrupos } from '../lib/grupos';
 import { atualizar, cicloDe, medConcluido, medConcluidoAlgumaVez, reiniciarGrupo, statsGrupo, useEstado } from '../lib/progresso';
-import { chaveItem, FASES, ROTULO_FASE_CURTO } from '../lib/questoes';
+import { chaveItem, FASES_MODULO, ROTULO_FASE_CURTO } from '../lib/questoes';
 import { vinculoNoGrupo, pubchemDe } from '../data/banco';
 import { Pagina } from '../components/Layout';
 import { Barra, avisar, pct, Vazio } from '../components/ui';
@@ -25,7 +25,7 @@ export function Modulo() {
 
   if (!grupo) return <Pagina><Vazio>Grupo não encontrado. <Link to="/" className="underline">Voltar</Link></Vazio></Pagina>;
 
-  const erradas = ids.flatMap((m) => FASES.map((f) => chaveItem(g, m, f))).filter((k) => e.itens[k] && e.itens[k].ultimo !== 'certo');
+  const erradas = ids.flatMap((m) => FASES_MODULO.map((f) => chaveItem(g, m, f))).filter((k) => e.itens[k] && e.itens[k].ultimo !== 'certo');
   const desbloq = !!e.gruposConcluidos[g];
   const pos = e.posicao[g];
   const classes = [...new Set(meds.map((m) => vinculoNoGrupo(m, g).classeId))];
@@ -36,7 +36,7 @@ export function Modulo() {
     setBaixando(true);
     try {
       const urls = meds.flatMap((m) => pubchemDe(m).map((p) => p.imagem));
-      const cache = await caches.open('pharmaquest-v1');
+      const cache = await caches.open('pharmaquest-moleculas');
       await cache.addAll(urls);
       atualizar((st) => { if (!st.offline.includes(g)) st.offline.push(g); });
       avisar('Módulo disponível offline', `${urls.length} estruturas moleculares e todo o conteúdo do grupo foram salvos neste dispositivo.`, 'download');
@@ -107,7 +107,7 @@ export function Modulo() {
             {classes.map((c) => <option key={c} value={c}>{banco.classes.get(c)?.sigla ?? banco.classes.get(c)?.nome}</option>)}
           </select>
         </div>
-        {!meds.length && <Vazio>Nenhum medicamento com conteúdo validado para as três fases neste grupo ainda.</Vazio>}
+        {!meds.length && <Vazio>Nenhum medicamento com conteúdo validado para todas as fases neste grupo ainda.</Vazio>}
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {visiveis.map((m) => {
             const conc = medConcluido(e, g, m.id);
@@ -119,12 +119,12 @@ export function Modulo() {
                 <div className="flex items-start justify-between gap-2">
                   <div>
                     <p className="font-semibold text-slate-900 dark:text-white">{m.nome}</p>
-                    <p className="text-xs text-slate-500">{jaFez ? (c?.sigla ?? c?.nome) : 'Classe revelada após a fase 2'}</p>
+                    <p className="text-xs text-slate-500">{jaFez ? (c?.sigla ?? c?.nome) : 'Classe revelada após a fase 1'}</p>
                   </div>
                   {conc ? <span className="selo bg-acerto-100 text-acerto-700 dark:bg-acerto-700/30 dark:text-acerto-100"><Icone nome="check" className="h-3 w-3" /> Concluído</span> : pos?.medId === m.id ? <span className="selo bg-petroleo-50 text-petroleo-700">Em andamento</span> : null}
                 </div>
                 <div className="mt-3 flex gap-1.5">
-                  {FASES.map((f) => {
+                  {FASES_MODULO.map((f) => {
                     const it = e.itens[chaveItem(g, m.id, f)];
                     const cor = !it ? 'bg-slate-200 dark:bg-slate-700' : it.ultimo === 'certo' ? 'bg-acerto-500' : it.ultimo === 'parcial' ? 'bg-parcial-500' : 'bg-erro-500';
                     return <span key={f} className={`h-1.5 flex-1 rounded-full ${cor}`} title={`${ROTULO_FASE_CURTO[f]}: ${it ? it.ultimo : 'não respondida'}`} />;

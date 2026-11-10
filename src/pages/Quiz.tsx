@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useBanco } from '../lib/hooks';
 import { atualizar, getEstado, registrarResposta, useEstado, type EventoHist } from '../lib/progresso';
-import { FASES, chaveItem, formatoPara, gerarQuestao, gerarQuestaoInversa, parseChave, ROTULO_FASE, type Correcao, type Questao, type Resultado } from '../lib/questoes';
+import { FASES_MODULO, chaveItem, formatoPara, gerarQuestao, gerarQuestaoInversa, parseChave, ROTULO_FASE, type Correcao, type Questao, type Resultado } from '../lib/questoes';
 import { selecionarRevisao, verificarConquistas } from '../lib/conquistas';
 import { listarGrupos } from '../lib/grupos';
 import { QuestaoCard } from '../components/QuestaoCard';
@@ -35,7 +35,7 @@ function montarSimulado(banco: Banco, g: string, n: number, modo: 'mc' | 'dis' |
       const inv = gerarQuestaoInversa(m, g);
       if (inv) qs.push(inv);
     } else {
-      const fase = FASES[(i + Math.floor(i / meds.length)) % 4];
+      const fase = FASES_MODULO[(i + Math.floor(i / meds.length)) % FASES_MODULO.length];
       qs.push(gerarQuestao(m, g, fase, formatoPara(modo, fase, i)));
     }
     i++;
@@ -60,13 +60,13 @@ export function Quiz({ simulado = false }: { simulado?: boolean }) {
     let chaves: string[] = [];
     if (tipo === 'erradas') {
       const meds = (banco.porGrupo.get(g) ?? []).map((m) => m.id);
-      chaves = meds.flatMap((m) => FASES.map((f) => chaveItem(g, m, f))).filter((k) => st.itens[k] && st.itens[k].ultimo !== 'certo');
+      chaves = meds.flatMap((m) => FASES_MODULO.map((f) => chaveItem(g, m, f))).filter((k) => st.itens[k] && st.itens[k].ultimo !== 'certo');
     } else if (tipo === 'salvas') chaves = [...st.salvas];
     else if (tipo === 'efeitos') chaves = Object.keys(st.itens).filter((k) => k.endsWith('|f3b') && st.itens[k].ultimo !== 'certo');
     else if (tipo === 'med') {
       const med = sp.get('med')!;
       chaves = Object.keys(st.itens).filter((k) => parseChave(k).medId === med);
-      if (!chaves.length) { const m = banco.medicamentos.get(med); if (m) chaves = FASES.map((f) => chaveItem(m.vinculos[0].grupoId, med, f)); }
+      if (!chaves.length) { const m = banco.medicamentos.get(med); if (m) chaves = FASES_MODULO.map((f) => chaveItem(m.vinculos[0].grupoId, med, f)); }
     } else if (tipo === 'classe') {
       const cl = sp.get('classe');
       chaves = Object.keys(st.itens).filter((k) => {

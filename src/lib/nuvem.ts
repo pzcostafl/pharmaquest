@@ -51,6 +51,8 @@ export function mesclar(a: Estado, b: Estado): Estado {
   r.historico = [...hist.values()].sort((x, y) => x.ts - y.ts).slice(-5000);
   const sims = new Map([...a.simulados, ...b.simulados].map((s) => [`${s.ts}|${s.grupoId}`, s]));
   r.simulados = [...sims.values()].sort((x, y) => x.ts - y.ts);
+  const des = new Map([...(a.desafios ?? []), ...(b.desafios ?? [])].map((d) => [d.ts, d]));
+  r.desafios = [...des.values()].sort((x, y) => x.ts - y.ts);
   r.pontos = Math.max(a.pontos, b.pontos);
   r.melhorSequencia = Math.max(a.melhorSequencia, b.melhorSequencia);
   r.revisoesRapidas = Math.max(a.revisoesRapidas, b.revisoesRapidas);

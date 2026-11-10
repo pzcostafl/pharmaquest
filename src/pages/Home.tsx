@@ -8,6 +8,7 @@ import { Barra, pct } from '../components/ui';
 import { Pagina } from '../components/Layout';
 import { EscolhaModo } from '../components/EscolhaModo';
 import { selecionarRevisao } from '../lib/conquistas';
+import { gruposDoDesafio, POR_GRUPO_COMPLETO } from '../lib/desafio';
 
 export function Home() {
   const banco = useBanco();
@@ -34,14 +35,17 @@ export function Home() {
     <Pagina>
       {/* Título e apresentação — y 12–25% */}
       <section className="surgir mb-6 sm:mb-8">
-        <p className="rotulo text-petroleo-700 dark:text-petroleo-300">Aprendizagem progressiva em três fases</p>
+        <p className="rotulo text-petroleo-700 dark:text-petroleo-300">Estude por pasta e teste tudo no Desafio Geral</p>
         <h1 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Pharma Ju Sales — Desafio da Farmacologia</h1>
         <p className="mt-2 max-w-3xl text-slate-600 dark:text-slate-300">
-          Escolha uma pasta terapêutica e domine cada princípio ativo: <strong>grupo terapêutico</strong> → <strong>classe farmacológica e mecanismo</strong> → <strong>nomes comerciais e efeitos adversos</strong>.
+          Em cada pasta, domine os princípios ativos: <strong>classe farmacológica e mecanismo</strong> → <strong>nomes comerciais e efeitos adversos</strong>. No <strong>Desafio Geral</strong>, todos os grupos se misturam e você identifica o grupo terapêutico de cada um.
         </p>
       </section>
 
-      {/* Indicadores gerais — y 27–39% */}
+      {/* Desafio Geral — destaque acima das pastas */}
+      <CardDesafio />
+
+      {/* Indicadores gerais */}
       <section className="mb-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
         {[
           { r: 'Medicamentos concluídos', v: `${concl}/${totalVinc}`, s: <Barra valor={totalVinc ? concl / totalVinc : 0} className="mt-2 h-1.5" />, i: 'check' },
@@ -112,5 +116,48 @@ export function Home() {
       </section>
       {escolher && <EscolhaModo onFechar={() => setEscolher(null)} onEscolhido={() => nav(`/modulo/${escolher}`)} />}
     </Pagina>
+  );
+}
+
+function CardDesafio() {
+  const banco = useBanco();
+  const e = useEstado();
+  const nGrupos = gruposDoDesafio(banco).length;
+  const rodadas = e.desafios ?? [];
+  const ultimas = rodadas.slice(-8);
+  const ultima = rodadas[rodadas.length - 1];
+  const melhor = rodadas.reduce((m, d) => Math.max(m, d.acertos / d.total), 0);
+  return (
+    <section className="surgir mb-6 overflow-hidden rounded-3xl bg-gradient-to-br from-petroleo-700 via-petroleo-800 to-petroleo-950 p-5 text-white shadow-lg sm:mb-8 sm:p-7">
+      <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div className="flex items-start gap-4">
+          <span className="rounded-2xl bg-white/15 p-3.5"><Icone nome="capsulas" className="h-8 w-8" /></span>
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight">Desafio Geral</h2>
+            <p className="mt-1 text-sm text-petroleo-100">Teste seus conhecimentos sobre todos os grupos terapêuticos.</p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs font-medium">
+              <span className="rounded-full bg-white/15 px-3 py-1">{nGrupos} grupos</span>
+              <span className="rounded-full bg-white/15 px-3 py-1">até {nGrupos * POR_GRUPO_COMPLETO} questões por rodada completa</span>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 md:items-end">
+          {rodadas.length > 0 ? (
+            <div className="flex items-end gap-4">
+              <div className="flex h-12 items-end gap-1" role="img" aria-label="Aproveitamento nas últimas rodadas">
+                {ultimas.map((d) => <span key={d.ts} className="w-2.5 rounded-t bg-white/80" style={{ height: `${Math.max(8, (d.acertos / d.total) * 100)}%` }} title={`${d.acertos}/${d.total}`} />)}
+              </div>
+              <div className="text-right text-sm">
+                <p className="text-petroleo-100">última: <strong className="text-white">{pct(ultima.acertos / ultima.total)}</strong></p>
+                <p className="text-petroleo-100">melhor: <strong className="text-white">{pct(melhor)}</strong></p>
+              </div>
+            </div>
+          ) : <p className="text-sm text-petroleo-100">Você ainda não jogou nenhuma rodada.</p>}
+          <Link to="/desafio" className="btn bg-white px-6 py-3 text-base text-petroleo-800 hover:bg-petroleo-50">
+            Iniciar desafio <Icone nome="avancar" className="h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }

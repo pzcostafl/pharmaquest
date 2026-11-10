@@ -7,6 +7,9 @@ import { parseChave, ROTULO_FASE } from '../lib/questoes';
 import { Pagina } from '../components/Layout';
 import { Barra, pct, Secao, Vazio } from '../components/ui';
 import { Icone } from '../components/Icone';
+import { Link } from 'react-router-dom';
+import { aproveitamentoPorGrupo } from '../lib/desafio';
+import { GraficoGrupos } from './Desafio';
 
 /** Taxa de acerto por semana (últimas 8 semanas). */
 export function Evolucao() {
@@ -97,6 +100,19 @@ export function Desempenho() {
               })}
             </ul>
           )}
+        </Secao>
+        <Secao titulo="Desafio Geral — acertos por grupo" acao={<Link to="/desafio" className="btn-secundario py-2 text-xs">Jogar</Link>}>
+          {(() => {
+            const linhas = aproveitamentoPorGrupo(e, banco).map((x) => ({ id: x.grupo.id, nome: x.grupo.nomeCurto, acertos: x.acertos, total: x.total }));
+            const rod = e.desafios ?? [];
+            if (!linhas.some((l) => l.total)) return <Vazio>Jogue o Desafio Geral para ver em quais grupos você mais acerta.</Vazio>;
+            return (
+              <>
+                <p className="mb-3 text-xs text-slate-500">Todas as respostas de grupo terapêutico já dadas · {rod.length} rodada(s){rod.length ? `, a última com ${Math.round((rod[rod.length - 1].acertos / rod[rod.length - 1].total) * 100)}% de acerto` : ''}.</p>
+                <GraficoGrupos linhas={linhas} />
+              </>
+            );
+          })()}
         </Secao>
         <Secao titulo="Simulados">
           {!e.simulados.length ? <Vazio>Nenhum simulado realizado.</Vazio> : (

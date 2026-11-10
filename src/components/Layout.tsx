@@ -26,7 +26,7 @@ const NAV = [
 ];
 
 /** Telas de questão: modo foco (sem barra de abas nem rodapé, mais espaço para o teclado). */
-const modoFoco = (p: string) => p.startsWith('/jogar') || p.startsWith('/quiz') || p.startsWith('/simulado');
+const modoFoco = (p: string) => p.startsWith('/jogar') || p.startsWith('/quiz') || p.startsWith('/simulado') || p.startsWith('/desafio/jogar');
 
 export function Layout({ children }: { children: ReactNode }) {
   const perfil = usePerfil();
@@ -51,7 +51,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 pt-[env(safe-area-inset-top)] backdrop-blur dark:border-slate-800 dark:bg-slate-950/85">
         <div className="mx-auto flex h-14 w-full max-w-[1400px] items-center gap-3 px-4 sm:h-16 lg:w-[88%] lg:px-0">
           <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label="Pharma Ju Sales — início">
-            <img src="./icone.png" alt="" className="h-9 w-9 shrink-0 rounded-full" />
+            <img src="./icone.png" alt="" className="h-9 w-9 shrink-0" />
             <span className="min-w-0 leading-tight">
               <span className="block truncate text-[15px] font-bold tracking-tight text-petroleo-800 dark:text-petroleo-200">Pharma Ju Sales</span>
               <span className="hidden text-[11px] text-slate-500 sm:block">Desafio da Farmacologia</span>

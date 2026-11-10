@@ -15,7 +15,7 @@ const medsDe = (g: string) => (getBanco().porGrupo.get(g) ?? []).map((m) => m.id
 const especialista = (g: string) => (e: Estado) => !!e.gruposConcluidos[g] && dominioGrupo(e, g, medsDe(g)) >= 0.75;
 
 export const CONQUISTAS: Conquista[] = [
-  { id: 'primeiro-med', titulo: 'Primeiros passos', descricao: 'Concluir as três fases de um princípio ativo.', icone: 'estrela', teste: (e) => Object.keys(e.bonusMed).length >= 1 },
+  { id: 'primeiro-med', titulo: 'Primeiros passos', descricao: 'Concluir todas as fases de um princípio ativo.', icone: 'estrela', teste: (e) => Object.keys(e.bonusMed).length >= 1 },
   { id: 'primeira-pasta', titulo: 'Primeira pasta concluída', descricao: 'Concluir todos os medicamentos de um grupo terapêutico.', icone: 'pasta', teste: (e) => Object.keys(e.gruposConcluidos).length >= 1 },
   { id: 'todas-pastas', titulo: 'Farmacologia completa', descricao: 'Concluir todas as pastas terapêuticas.', icone: 'trofeu', teste: (e) => listarGrupos().filter((g) => medsDe(g.id).length).every((g) => e.gruposConcluidos[g.id]) },
   { id: 'esp-antihipertensivos', titulo: 'Especialista em anti-hipertensivos', descricao: 'Concluir a pasta com domínio ≥ 75%.', icone: 'coracao', teste: especialista('antihipertensivos') },
@@ -25,6 +25,7 @@ export const CONQUISTAS: Conquista[] = [
   { id: 'explorador', titulo: 'Explorador da farmacologia', descricao: 'Concluir ao menos um medicamento em 5 grupos diferentes.', icone: 'bussola', teste: (e) => new Set(Object.keys(e.bonusMed).map((k) => k.split('|')[0])).size >= 5 },
   { id: 'seq-10', titulo: 'Precisão clínica', descricao: '10 medicamentos consecutivos sem erros.', icone: 'alvo', teste: (e) => e.melhorSequencia >= 10 },
   { id: 'simulado-90', titulo: 'Aprovado com louvor', descricao: 'Acertar ≥ 90% em um simulado final.', icone: 'diploma', teste: (e) => e.simulados.some((s) => s.total >= 10 && s.acertos / s.total >= 0.9) },
+  { id: 'desafio-geral', titulo: 'Visão de conjunto', descricao: 'Acertar ≥ 80% no Desafio Geral completo (55 questões).', icone: 'bussola', teste: (e) => (e.desafios ?? []).some((d) => d.completo && d.acertos / d.total >= 0.8) },
   { id: 'revisor', titulo: 'Revisor dedicado', descricao: 'Completar 5 sessões de revisão rápida.', icone: 'relogio', teste: (e) => e.revisoesRapidas >= 5 },
   { id: 'dissertativo-50', titulo: 'Raciocínio próprio', descricao: '50 respostas dissertativas corretas.', icone: 'lapis', teste: (e) => e.historico.filter((h) => h.formato === 'dis' && h.resultado === 'certo').length >= 50 },
   { id: 'recuperacao', titulo: 'Recuperação', descricao: 'Acertar 20 questões que você havia errado antes.', icone: 'seta', teste: (e) => Object.values(e.itens).filter((i) => i.erros > 0 && i.ultimo === 'certo').length >= 20 },
