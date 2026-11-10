@@ -39,6 +39,11 @@ export function carregarConteudoAdmin(): ConteudoAdmin {
   return { medicamentos: {}, classes: [], desativados: [], gruposExtras: [] };
 }
 
-export function salvarConteudoAdmin(c: ConteudoAdmin) {
+let enviarRemoto: ((c: ConteudoAdmin) => void) | null = null;
+/** Registrado pela camada de nuvem: envia edições do admin ao Supabase. */
+export function aoSalvarConteudo(f: (c: ConteudoAdmin) => void) { enviarRemoto = f; }
+
+export function salvarConteudoAdmin(c: ConteudoAdmin, remoto = true) {
   localStorage.setItem(CHAVE, JSON.stringify(c));
+  if (remoto) enviarRemoto?.(c);
 }

@@ -1,4 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { nuvemAtiva } from '../lib/supabase';
+import { progressoDeTodos, useConta } from '../lib/nuvem';
+import { FormConta } from '../components/Conta';
+import type { Estado } from '../lib/progresso';
 import { useBanco } from '../lib/hooks';
 import { getBanco, invalidarBanco, pendencias } from '../data/banco';
 import { carregarConteudoAdmin, salvarConteudoAdmin, type ConteudoAdmin } from '../lib/conteudo';
@@ -168,15 +172,30 @@ function Validar({ med, onFechar, autor }: { med: Medicamento; onFechar: () => v
   );
 }
 
+/** Com Supabase: acesso pelo papel 'admin' no banco. Sem Supabase: PIN local. */
 export function Admin() {
+  const conta = useConta();
+  if (nuvemAtiva()) {
+    if (!conta.sessao) return <Pagina estreita><div className="cartao mx-auto max-w-md p-6"><Icone nome="escudo" className="h-8 w-8 text-petroleo-600" /><h1 className="mt-3 text-xl font-bold">Área administrativa</h1><p className="mb-4 mt-1 text-sm text-slate-500">Entre com uma conta de administrador.</p><FormConta compacto /></div></Pagina>;
+    if (conta.papel !== 'admin') return <Pagina estreita><Vazio>A conta <strong>{conta.sessao.user.email}</strong> é de estudante. O papel de administrador é concedido pelo dono do projeto no Supabase (ver SUPABASE.md).</Vazio></Pagina>;
+    return <PainelAdmin aoSair={null} />;
+  }
+  return <AdminLocal />;
+}
+
+function AdminLocal() {
   const [logado, setLogado] = useState(sessionStorage.getItem('pq:admin') === '1');
-  const [aba, setAba] = useState<'meds' | 'classes' | 'grupos' | 'desempenho' | 'dados'>('meds');
   if (!logado) return <Acesso onOk={() => { sessionStorage.setItem('pq:admin', '1'); setLogado(true); }} />;
+  return <PainelAdmin aoSair={() => { sessionStorage.removeItem('pq:admin'); setLogado(false); }} />;
+}
+
+function PainelAdmin({ aoSair }: { aoSair: (() => void) | null }) {
+  const [aba, setAba] = useState<'meds' | 'classes' | 'grupos' | 'desempenho' | 'dados'>('meds');
   return (
     <Pagina>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div><h1 className="text-3xl font-bold">Área administrativa</h1><p className="text-sm text-slate-500">Toda edição científica passa por validação antes de entrar no jogo.</p></div>
-        <button className="btn-secundario" onClick={() => { sessionStorage.removeItem('pq:admin'); setLogado(false); }}>Sair</button>
+        {aoSair && <button className="btn-secundario" onClick={aoSair}>Sair</button>}
       </div>
       <nav className="mt-5 flex flex-wrap gap-1.5">
         {([['meds', 'Medicamentos'], ['classes', 'Classes'], ['grupos', 'Grupos terapêuticos'], ['desempenho', 'Desempenho dos estudantes'], ['dados', 'Importar / exportar']] as const).map(([k, r]) => (
@@ -310,14 +329,18 @@ function AbaGrupos() {
 
 function AbaDesempenho() {
   const banco = useBanco();
-  const perfis = listarPerfis();
-  const estados = perfis.map((p) => ({ p, e: estadoDoPerfil(p.id) }));
+  const [remoto, setRemoto] = useState<{ id: string; nome: string; estado: Estado }[] | null>(null);
+  useEffect(() => { if (nuvemAtiva()) progressoDeTodos().then(setRemoto); }, []);
+  const estados = remoto
+    ? remoto.map((r) => ({ p: { id: r.id, nome: r.nome }, e: { ...estadoDoPerfil('__vazio__'), ...r.estado } }))
+    : listarPerfis().map((p) => ({ p, e: estadoDoPerfil(p.id) }));
+  const perfis = estados.map((x) => x.p);
   const erros = new Map<string, number>();
   for (const { e } of estados) for (const [k, it] of Object.entries(e.itens)) erros.set(k, (erros.get(k) ?? 0) + it.erros);
   const top = [...erros.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
   return (
     <div className="grid gap-5 lg:grid-cols-2">
-      <Secao titulo={`Estudantes neste dispositivo (${perfis.length})`}>
+      <Secao titulo={`${remoto ? 'Estudantes com conta' : 'Estudantes neste dispositivo'} (${perfis.length})`}>
         <ul className="divide-y divide-slate-100 text-sm dark:divide-slate-800">
           {estados.map(({ p, e }) => {
             const resp = Object.values(e.itens);

@@ -26,6 +26,8 @@ No iPhone/iPad, abra o link no Safari e use **Compartilhar → Adicionar à Tela
 - As estruturas 2D e as fórmulas vêm do PubChem (152 compostos). Biológicos (anticorpos, insulinas) não têm imagem, e o app explica o motivo. Alginato e sucralfato não foram encontrados no PubChem, por isso não mostram estrutura.
 - Os pontos que precisam de revisão estão em `REVISAO_DOCENTE.md`.
 
+## Conta e sincronização (Supabase)
+O app tem integração com o Supabase para login por e-mail e senha, sincronização do progresso entre celular, iPad e computador, e papel de administrador definido no banco (RLS). Para configurar, siga [SUPABASE.md](SUPABASE.md). Sem configurar, tudo funciona no modo local, e o painel administrativo fica protegido por um PIN deste navegador.
+
 ## Limitações desta versão
-- **Sem servidor.** O progresso fica no navegador de cada aparelho. Login com conta, sincronização entre aparelhos e separação real entre aluno e administrador exigem um backend (Supabase/PostgreSQL); a camada `src/lib/conteudo.ts` e `src/lib/progresso.ts` está isolada para essa troca. O PIN do admin protege só aquele navegador.
 - **Correção dissertativa sem IA.** O corretor normaliza o texto, aceita sinônimos cadastrados e tolera erros leves de digitação. Respostas com paráfrases muito livres podem não ser reconhecidas.

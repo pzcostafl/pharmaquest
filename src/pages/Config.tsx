@@ -4,6 +4,8 @@ import { atualizar, criarPerfil, excluirPerfil, exportarEstado, importarEstado, 
 import { aplicarTema, lerTema, Pagina, type TemaPref } from '../components/Layout';
 import { SeletorModo } from '../components/EscolhaModo';
 import { avisar, Secao } from '../components/ui';
+import { FormConta } from '../components/Conta';
+import { nuvemAtiva } from '../lib/supabase';
 
 export function Config() {
   const e = useEstado();
@@ -24,6 +26,7 @@ export function Config() {
     <Pagina estreita>
       <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Configurações</h1>
       <div className="mt-6 space-y-5">
+        {nuvemAtiva() && <Secao titulo="Conta e sincronização"><FormConta /></Secao>}
         <Secao titulo="Formato das questões">
           <SeletorModo valor={e.modo} onChange={(m) => { atualizar((s) => { s.modo = m; s.modoEscolhido = true; }); avisar('Formato atualizado', 'Vale para todas as fases a partir da próxima questão.', 'check'); }} />
         </Secao>
@@ -73,21 +76,33 @@ export function Config() {
   );
 }
 
-/** Tela de boas-vindas: criação do primeiro perfil. */
+/** Tela de boas-vindas: entrar com conta (sincroniza celular e iPad) ou estudar só neste aparelho. */
 export function BoasVindas() {
   const [nome, setNome] = useState('');
+  const [semConta, setSemConta] = useState(!nuvemAtiva());
   return (
-    <div className="flex min-h-dvh items-center justify-center bg-gradient-to-br from-petroleo-50 to-slate-50 p-4 dark:from-petroleo-950 dark:to-slate-950">
-      <form className="cartao surgir w-full max-w-md p-7" onSubmit={(ev) => { ev.preventDefault(); if (nome.trim()) criarPerfil(nome); }}>
+    <div className="flex min-h-dvh items-center justify-center bg-gradient-to-br from-petroleo-50 to-slate-50 p-4 pt-[max(1rem,env(safe-area-inset-top))] dark:from-petroleo-950 dark:to-slate-950">
+      <div className="cartao surgir w-full max-w-md p-6 sm:p-7">
         <img src="./icone.svg" alt="" className="h-12 w-12" />
         <h1 className="mt-4 text-2xl font-bold">PharmaQuest</h1>
         <p className="text-sm text-slate-500">Desafio da Farmacologia</p>
-        <p className="mt-4 text-sm text-slate-600 dark:text-slate-300">Estude os principais princípios ativos em três fases: grupo terapêutico, classe farmacológica e mecanismo, nomes comerciais e efeitos adversos.</p>
-        <label className="mt-5 block text-sm font-medium" htmlFor="nome">Como podemos te chamar?</label>
-        <input id="nome" className="campo mt-1.5" value={nome} onChange={(ev) => setNome(ev.target.value)} placeholder="Seu nome" autoFocus />
-        <button className="btn-primario mt-4 w-full" disabled={!nome.trim()}>Começar a estudar</button>
-        <p className="mt-3 text-xs text-slate-500">Seu progresso é salvo neste dispositivo e continua disponível offline.</p>
-      </form>
+        <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">Estude os principais princípios ativos em três fases: grupo terapêutico, classe farmacológica e mecanismo, nomes comerciais e efeitos adversos.</p>
+        {!semConta ? (
+          <div className="mt-5">
+            <FormConta />
+            <p className="mt-4 text-center text-xs text-slate-500">Com conta, seu progresso fica salvo e sincronizado entre celular, iPad e computador.</p>
+            <button className="btn-fantasma mt-2 w-full" onClick={() => setSemConta(true)}>Estudar sem conta (só neste aparelho)</button>
+          </div>
+        ) : (
+          <form onSubmit={(ev) => { ev.preventDefault(); if (nome.trim()) criarPerfil(nome); }}>
+            <label className="mt-5 block text-sm font-medium" htmlFor="nome">Como podemos te chamar?</label>
+            <input id="nome" className="campo mt-1.5" value={nome} onChange={(ev) => setNome(ev.target.value)} placeholder="Seu nome" autoFocus />
+            <button className="btn-primario mt-4 w-full" disabled={!nome.trim()}>Começar a estudar</button>
+            <p className="mt-3 text-xs text-slate-500">O progresso fica salvo neste aparelho e funciona offline.{nuvemAtiva() && ' Você pode criar uma conta depois, em Ajustes, sem perder nada.'}</p>
+            {nuvemAtiva() && <button type="button" className="btn-fantasma mt-2 w-full" onClick={() => setSemConta(false)}>Voltar para entrar com conta</button>}
+          </form>
+        )}
+      </div>
     </div>
   );
 }

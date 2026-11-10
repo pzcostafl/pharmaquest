@@ -65,12 +65,14 @@ export interface Estado {
   simulados: { ts: number; grupoId: string; acertos: number; total: number }[];
   revisoesRapidas: number;
   offline: string[]; // grupos baixados
+  /** última alteração local (ms) — usado na sincronização */
+  atualizadoEm: number;
 }
 
 const novoEstado = (): Estado => ({
   versao: 1, modo: 'mc', modoEscolhido: false, pontos: 0, itens: {}, concluidos: {}, ciclos: {}, posicao: {},
   erroNoMed: {}, sequenciaSemErro: 0, melhorSequencia: 0, gruposConcluidos: {}, bonusPasta: {}, bonusMed: {},
-  historico: [], favoritos: [], salvas: [], conquistas: {}, simulados: [], revisoesRapidas: 0, offline: [],
+  historico: [], favoritos: [], salvas: [], conquistas: {}, simulados: [], revisoesRapidas: 0, offline: [], atualizadoEm: 0,
 });
 
 // ---------------- perfis ----------------
@@ -128,13 +130,47 @@ let falhaGravacao = false;
 const ouvintes = new Set<() => void>();
 function emitir() { ouvintes.forEach((f) => f()); }
 
+const ouvintesAlteracao = new Set<() => void>();
+/** Avisado a cada alteração feita pelo estudante (não dispara em trocas de perfil). */
+export function ouvirAlteracoes(f: () => void) {
+  ouvintesAlteracao.add(f);
+  return () => { ouvintesAlteracao.delete(f); };
+}
+
 export function atualizar(fn: (e: Estado) => void) {
   const novo = structuredClone(estado);
   fn(novo);
+  novo.atualizadoEm = Date.now();
   estado = novo;
   if (perfilAtualId) falhaGravacao = !gravar(kEstado(perfilAtualId), estado);
   emitir();
+  ouvintesAlteracao.forEach((f) => f());
 }
+
+/** Substitui o estado (ex.: após mesclar com a nuvem) sem gerar novo envio. */
+export function substituirEstado(e: Estado) {
+  estado = { ...novoEstado(), ...e };
+  if (perfilAtualId) falhaGravacao = !gravar(kEstado(perfilAtualId), estado);
+  emitir();
+}
+
+/** Garante um perfil local ligado à conta da nuvem (mesmo id do usuário) e o ativa. */
+export function vincularConta(userId: string, nome: string) {
+  const perfis = listarPerfis();
+  const existente = perfis.find((p) => p.id === userId);
+  if (!existente) {
+    // primeiro login neste aparelho: herda o progresso do perfil local em uso, se houver
+    const herdado = perfilAtualId && perfilAtualId !== userId ? ler<Partial<Estado>>(kEstado(perfilAtualId), {}) : {};
+    gravar(K_PERFIS, [...perfis, { id: userId, nome, criadoEm: Date.now() }]);
+    gravar(kEstado(userId), herdado);
+  } else if (existente.nome !== nome && nome) {
+    gravar(K_PERFIS, perfis.map((p) => (p.id === userId ? { ...p, nome } : p)));
+  }
+  if (perfilAtualId !== userId) trocarPerfil(userId);
+  else emitir();
+}
+export const perfilAtualIdAtual = () => perfilAtualId;
+export const estadoVazio = novoEstado;
 export const getEstado = () => estado;
 export const houveFalhaGravacao = () => falhaGravacao;
 export function useEstado(): Estado {
