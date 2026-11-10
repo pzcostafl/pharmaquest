@@ -86,6 +86,7 @@ export function FormConta({ compacto = false }: { compacto?: boolean }) {
       {modo === 'cadastrar' && <input className="campo" placeholder="Seu nome" value={nome} onChange={(e) => setNome(e.target.value)} autoComplete="name" />}
       <input className="campo" type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" inputMode="email" autoCapitalize="none" required />
       {modo !== 'recuperar' && <input className="campo" type="password" placeholder="Senha (mín. 6 caracteres)" value={senha} onChange={(e) => setSenha(e.target.value)} autoComplete={modo === 'entrar' ? 'current-password' : 'new-password'} minLength={6} required />}
+      {modo === 'cadastrar' && <p className="text-xs text-slate-500">Seu progresso (acertos e pontuação) fica visível para a administradora da turma, para acompanhar o desempenho do grupo.</p>}
       {msg && <p className={`rounded-lg p-2.5 text-sm ${msg.tipo === 'erro' ? 'bg-erro-50 text-erro-700 dark:bg-erro-700/20 dark:text-erro-100' : 'bg-acerto-50 text-acerto-700 dark:bg-acerto-700/20 dark:text-acerto-100'}`}>{msg.texto}</p>}
       <button className="btn-primario w-full" disabled={ocupado}>{ocupado ? 'Aguarde…' : modo === 'entrar' ? 'Entrar' : modo === 'cadastrar' ? 'Criar conta' : 'Enviar link de redefinição'}</button>
       {!compacto && (

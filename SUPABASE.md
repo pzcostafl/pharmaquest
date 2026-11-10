@@ -14,7 +14,7 @@ O plano gratuito é suficiente. A configuração leva cerca de 10 minutos.
 ## 2. Ajustar o login
 Em **Authentication → Sign In / Providers → Email**:
 - Mantenha **Email** ativado.
-- **Confirm email:** se ficar ligado, cada pessoa confirma o cadastro pelo link no e-mail, que é o mais seguro. Para um uso só entre vocês dois, dá para desligar e entrar na hora.
+- **Confirm email:** recomendo **desligar** para uma turma pequena. O servidor de e-mail embutido do plano gratuito envia poucos e-mails por hora, então várias amigas se cadastrando ao mesmo tempo esbarrariam no limite e ficariam sem o link de confirmação. Para manter a confirmação ligada, configure um SMTP próprio em *Authentication → Emails → SMTP Settings*.
 
 Em **Authentication → URL Configuration**, preencha **Site URL** com o endereço do app, por exemplo `https://SEU-USUARIO.github.io/pharmaquest/`. Esse endereço é usado nos links de confirmação e de "esqueci minha senha".
 
@@ -30,7 +30,7 @@ Em **Project Settings → API**, copie a **Project URL** e a chave **anon public
 
 A chave *anon* é pública por definição: ela vai dentro do app de qualquer jeito. Quem protege os dados são as regras RLS do banco. **Nunca** use a chave `service_role` no app.
 
-## 4. Definir o administrador
+## 4. Definir a administradora (ela também joga)
 Todo cadastro novo entra como **estudante**. Para tornar uma conta administradora:
 1. Crie a conta pelo próprio app (Ajustes → Conta → Criar conta).
 2. No **SQL Editor**, rode o comando abaixo, trocando o e-mail:
@@ -38,7 +38,9 @@ Todo cadastro novo entra como **estudante**. Para tornar uma conta administrador
    update public.perfis set papel = 'admin'
    where id = (select id from auth.users where email = 'seu-email@exemplo.com');
    ```
-3. No app, saia da conta e entre de novo. A *Área administrativa* passa a abrir.
+3. No app, saia da conta e entre de novo. Aparece o botão **Admin** no topo. A conta continua jogando normalmente: o papel de admin só acrescenta permissões.
+
+As colegas de sala criam contas pelo próprio app e entram como estudantes. Cada uma vê só o próprio progresso.
 
 Para remover o acesso de administrador, troque `'admin'` por `'estudante'` no mesmo comando.
 
